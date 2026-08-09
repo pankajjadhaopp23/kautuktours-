@@ -83,6 +83,18 @@ color:#aaa;
 text-align:center;
 padding:18px;
 font-size:14px
+}.vehicle-gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-bottom:15px;
+}
+
+.vehicle-gallery img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:12px;
 }
 </style>
 </head>
@@ -133,7 +145,14 @@ font-size:14px
 
 <div class="cards">
 <div class="card">
-<img src="2025-10-29-06-32-36-241.jpg" style="width:100%;border-radius:12px;margin-bottom:15px;">
+<div class="vehicle-gallery">
+<img src="2025-10-29-06-32-36-241.jpg">
+<img src="IMG_20250508_172739258_HDR.jpg">
+<img src="IMG_20250508_172914775_HDR.jpg">
+<img src="IMG_20250508_173043777.jpg">
+<img src="IMG_20250508_173114266_HDR.jpg">
+<img src="IMG_20250508_173258686_HDR.jpg">
+</div>
 <h3>🚙 Maruti Ertiga CNG</h3>
 <p>Comfortable 6+1 seating for family and group travel.</p>
 </div>

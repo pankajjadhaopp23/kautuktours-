@@ -29,6 +29,11 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
 @media(max-width:820px){nav{display:none}.hero{padding:72px 0 70px}.hero:after{bottom:-100px}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:155px}.gallery img:first-child{grid-row:span 1;grid-column:1/-1;height:210px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}section{padding:58px 0}.wrap{padding:0 16px}}
 @media(min-width:821px){.sticky{display:none}}
 @media(max-width:420px){h1{font-size:40px;letter-spacing:-1.2px}.hero p{font-size:16px}.actions .btn{width:100%}.form{padding:21px;border-radius:21px}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:175px}}
+
+.booking-id{display:none;margin:14px 0 0;padding:11px 14px;border-radius:13px;background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;font-size:13px;font-weight:850;text-align:center}
+.quick-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.quick-actions a{flex:1;min-width:140px;text-align:center;padding:10px 12px;border-radius:12px;font-weight:850;font-size:12px;border:1px solid #e5e7eb;background:#fff}
+.prof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.prof-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 28px rgba(15,23,42,.06)}.prof-card h3{margin:7px 0}.prof-card p{color:var(--muted);font-size:13px}.prof-icon{font-size:27px}
+@media(max-width:820px){.prof-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -38,6 +43,17 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
 <section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What we offer</div><h2>Travel Services</h2><p>Simple, comfortable and dependable travel solutions from Pune.</p></div><div class="grid"><div class="card"><div class="icon">🚕</div><h3>Local Cab</h3><p>Pune local travel, hourly and point-to-point cab service.</p></div><div class="card"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>Pune airport pickup and drop with reliable timing.</p></div><div class="card"><div class="icon">🛣️</div><h3>Outstation Trips</h3><p>Pune to Mumbai, Solapur, Tuljapur, Shirdi and more.</p></div><div class="card"><div class="icon">🧳</div><h3>Tour Packages</h3><p>Family trips, one-day tours and customized travel plans.</p></div><div class="card"><div class="icon">🏢</div><h3>Corporate Travel</h3><p>Business travel and employee transportation support.</p></div><div class="card"><div class="icon">🎉</div><h3>Events & Functions</h3><p>Cab arrangements for weddings, events and group travel.</p></div></div></div></section>
 <section id="vehicles"><div class="wrap"><div class="section-head"><div class="eyebrow">Comfort on the road</div><h2>Our Vehicles</h2><p>Choose the right vehicle for your family, airport or outstation journey.</p></div><div class="grid"><div class="card vehicle"><img src="2025-10-29-06-32-36-241.jpg" alt="Kautuk Tours Maruti Ertiga CNG" loading="lazy"><div class="body"><h3>Maruti Ertiga CNG</h3><p>Comfortable family cab • AC • spacious luggage • ideal for outstation trips.</p><span class="tag">Popular Choice</span></div></div><div class="card"><div class="icon">🚗</div><h3>Dzire / Etios</h3><p>Economical and comfortable sedan travel for smaller groups.</p></div><div class="card"><div class="icon">🚙</div><h3>Innova / Crysta</h3><p>Premium comfort for family and long-distance journeys.</p></div><div class="card"><div class="icon">🚌</div><h3>Tempo Traveller</h3><p>Group travel options available on request.</p></div></div></div></section>
 <section id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">See our rides</div><h2>Vehicle Gallery</h2><p>A quick look at the vehicles used for comfortable journeys.</p></div><div class="gallery"><img src="2025-10-29-06-32-36-241.jpg" alt="Kautuk Tours cab" loading="lazy"><img src="IMG_20250508_172739258_HDR.jpg" alt="Kautuk Tours vehicle" loading="lazy"><img src="IMG_20250508_172914775_HDR.jpg" alt="Kautuk Tours vehicle" loading="lazy"><img src="IMG_20250508_173043777.jpg" alt="Kautuk Tours vehicle" loading="lazy"></div></div></section>
+
+<section id="why-book">
+<div class="wrap">
+<div class="section-head"><div class="eyebrow">Why choose us</div><h2>Professional Booking Experience</h2><p>Clear estimates, quick confirmation and direct WhatsApp support.</p></div>
+<div class="prof-grid">
+<div class="prof-card"><div class="prof-icon">🔖</div><h3>Booking ID</h3><p>Every WhatsApp request gets a unique Kautuk booking reference for easy follow-up.</p></div>
+<div class="prof-card"><div class="prof-icon">💰</div><h3>Clear Fare</h3><p>₹15/km estimate, with toll/parking and applicable night or driver charges shown separately.</p></div>
+<div class="prof-card"><div class="prof-icon">📍</div><h3>Route Support</h3><p>Open pickup and destination directly in Google Maps before confirming your trip.</p></div>
+</div>
+</div>
+</section>
 <section class="booking" id="booking"><div class="wrap"><div class="section-head"><div class="eyebrow">Quick booking</div><h2>Book Your Cab</h2><p>Fill in your travel details and send the booking directly on WhatsApp.</p></div><form class="form" onsubmit="sendBooking(event)"><div class="form-top"><div class="form-icon">📝</div><div><h3>Trip Details</h3><p>We will confirm availability and fare with you on WhatsApp.</p></div></div><div class="formgrid"><div class="field"><label for="name">Your Name *</label><input id="name" required autocomplete="name" placeholder="Enter your name"></div><div class="field"><label for="mobile">Mobile Number *</label><input id="mobile" type="tel" inputmode="numeric" maxlength="10" minlength="10" pattern="[0-9]{10}" required autocomplete="tel" placeholder="10 digit mobile number"></div><div class="field"><label for="pickup">Pickup Location *</label><input id="pickup" required list="mhLocations" autocomplete="street-address" placeholder="e.g. Katraj, Pune"></div><div class="field"><label for="destination">Destination *</label><input id="destination" required list="mhLocations" placeholder="e.g. Solapur"><datalist id="mhLocations"><option value="Achalpur"></option>
 <option value="Aheri"></option>
 <option value="Ahilyanagar"></option>
@@ -401,15 +417,21 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
 <option value="Yavatmal"></option>
 <option value="Yawal"></option>
 <option value="Yevla"></option>
-<option value="Zari-Jamani"></option></datalist></div><div class="field"><label for="date">Travel Date *</label><input id="date" type="date" required></div><div class="field"><label for="trip">Trip Type</label><select id="trip"><option>One Way</option><option>Round Trip</option><option>Local</option><option>Airport Transfer</option></select></div><div class="field"><label for="vehicle">Vehicle</label><select id="vehicle"><option>Maruti Ertiga CNG</option><option>Dzire / Etios</option><option>Innova / Crysta</option><option>Tempo Traveller</option></select></div><div class="field"><label for="passengers">Passengers</label><select id="passengers"><option>1-3</option><option>4-6</option><option>7-12</option><option>13+</option></select></div><div class="field full"><label for="details">Trip Details</label><textarea id="details" placeholder="Pickup time, return date, luggage, special request etc."></textarea></div></div>
+<option value="Zari-Jamani"></option></datalist></div><div class="field"><label for="date">Travel Date *</label><input id="date" type="date" required></div><div class="field"><label for="trip">Trip Type</label><select id="trip"><option>One Way</option><option>Round Trip</option><option>Local</option><option>Airport Transfer</option></select></div><div class="field"><label for="vehicle">Vehicle</label><select id="vehicle"><option>Maruti Ertiga CNG</option><option>Dzire / Etios</option><option>Innova / Crysta</option><option>Tempo Traveller</option></select><div class="note" style="text-align:left;margin-top:4px">Vehicle-wise final fare is confirmed before booking.</div></div><div class="field"><label for="passengers">Passengers</label><select id="passengers"><option>1-3</option><option>4-6</option><option>7-12</option><option>13+</option></select></div><div class="field full"><label for="details">Trip Details</label><textarea id="details" placeholder="Pickup time, return date, luggage, special request etc."></textarea></div></div>
 <div id="fareBox" class="fare-box">
   <div class="fare-label">Estimated Fare</div>
   <div id="fareAmount" class="fare-amount">₹—</div>
   <div id="fareMeta" class="fare-meta">Select a destination to see an estimate.</div>
   <div id="fareBreakup" class="fare-breakup"></div>
   <div class="fare-note">₹15/km • Toll & parking extra • Night charge ₹1,200 if applicable • Driver allowance ₹300 if applicable</div>
+<div id="bookingIdBox" class="booking-id"></div>
+<div class="quick-actions">
+<a id="pickupMap" href="#" target="_blank" rel="noopener">📍 Pickup in Maps</a>
+<a id="destinationMap" href="#" target="_blank" rel="noopener">🏁 Destination in Maps</a>
 </div>
-<button class="btn primary" type="submit">💬 Send Booking on WhatsApp</button><div class="note" style="margin-top:8px">📍 Maharashtra: 36 districts • 358 talukas searchable. Type any district or taluka; villages/localities can also be typed manually.</div><div class="note">Your details are opened in WhatsApp for confirmation. No payment is taken on this website.</div></form></div></section>
+
+</div>
+<button class="btn primary" type="submit">💬 Send Booking on WhatsApp</button><div class="note" style="margin-top:8px">📍 Maharashtra: 36 districts • 358 talukas searchable. Type any district or taluka; villages/localities can also be typed manually.</div><div class="note">WhatsApp not installed? The booking will open in WhatsApp Web instead.</div><div class="note">Your details are opened in WhatsApp for confirmation. No payment is taken on this website.</div></form></div></section>
 <section id="contact" class="contact"><div class="wrap"><h2>Ready to Travel?</h2><p>Contact Kautuk Tours and Travels for your next cab booking, airport transfer or outstation trip.</p><div class="actions"><a class="btn primary" href="tel:+918888926336">📞 88889 26336</a><a class="btn wa-btn" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">💬 WhatsApp Booking</a><a class="btn light" href="https://www.google.com/maps/search/?api=1&query=Pune%2C%20Maharashtra" target="_blank" rel="noopener">📍 Pune Location</a></div></div></section>
 </main>
 <footer>© 2026 Kautuk Tours and Travels • Pune • Cab • Tours • Travels</footer>
@@ -425,23 +447,32 @@ const fareBox=document.getElementById("fareBox");
 const fareAmount=document.getElementById("fareAmount");
 const fareMeta=document.getElementById("fareMeta");
 const fareBreakup=document.getElementById("fareBreakup");
+const bookingIdBox=document.getElementById("bookingIdBox");
+const pickupMap=document.getElementById("pickupMap");
+const destinationMap=document.getElementById("destinationMap");
 
 const RATE_PER_KM=15;
 const MIN_FARE=500;
 const ROUNDING=50;
 
-/* Reliable offline estimate table for common Pune outstation destinations.
-   Distances are approximate one-way driving distances from Pune and are used
-   only for an estimate. Final fare is confirmed by Kautuk Tours & Travels. */
+/* Approximate one-way distances from Pune for reliable offline estimates. */
 const DESTINATIONS={
   "mumbai":150,"lonavala":65,"mahabaleshwar":120,"shirdi":200,"tuljapur":300,
   "solapur":250,"kolhapur":230,"nashik":210,"satara":115,"sangli":230,
-  "ahmednagar":120,"ahmednagar":120,"pandharpur":210,"akkalkot":300,
+  "ahmednagar":120,"ahilyanagar":120,"pandharpur":210,"akkalkot":300,
   "aurangabad":235,"sambhajinagar":235,"chhatrapati sambhajinagar":235,
   "goa":450,"hyderabad":560,"bhimashankar":110,"jejuri":50
 };
 
-function getLocalDate(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+/* Confirmed special package requested for Kautuk Tours. */
+const SPECIAL_ROUND_TRIP={
+  "akkalkot":9000
+};
+
+function getLocalDate(){
+  const d=new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+}
 dateInput.min=getLocalDate();
 
 function money(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
@@ -450,36 +481,66 @@ function findDestinationDistance(name){
   const n=norm(name);
   if(DESTINATIONS[n]) return DESTINATIONS[n];
   for(const key of Object.keys(DESTINATIONS)){
-    if(n.includes(key) || key.includes(n)) return DESTINATIONS[key];
+    if(n.includes(key)||key.includes(n)) return DESTINATIONS[key];
   }
   return null;
 }
 function roundFare(n){return Math.max(MIN_FARE,Math.ceil(n/ROUNDING)*ROUNDING)}
-
+function makeBookingId(){
+  const d=new Date();
+  const y=d.getFullYear().toString().slice(-2);
+  const m=String(d.getMonth()+1).padStart(2,"0");
+  const day=String(d.getDate()).padStart(2,"0");
+  const rnd=Math.floor(1000+Math.random()*9000);
+  return `KT-${y}${m}${day}-${rnd}`;
+}
+function mapUrl(place){
+  return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place);
+}
+function updateMaps(){
+  const p=pickupInput.value.trim(), d=destinationInput.value.trim();
+  pickupMap.href=p?mapUrl(p):"#";
+  destinationMap.href=d?mapUrl(d):"#";
+  pickupMap.style.pointerEvents=p?"auto":"none";
+  destinationMap.style.pointerEvents=d?"auto":"none";
+}
 function calculateFare(){
   const pickup=pickupInput.value.trim();
   const destination=destinationInput.value.trim();
-  if(pickup.length<2 || destination.length<2){
+  updateMaps();
+  if(pickup.length<2||destination.length<2){
     fareBox.classList.remove("show");
     return;
   }
-
   fareBox.classList.add("show");
-  const km=findDestinationDistance(destination);
+  const key=norm(destination);
   const isRound=tripInput.value==="Round Trip";
 
+  /* Special fixed round-trip package: Pune ↔ Akkalkot = ₹9,000. */
+  if(isRound && SPECIAL_ROUND_TRIP[key]){
+    const total=SPECIAL_ROUND_TRIP[key];
+    fareAmount.textContent=money(total);
+    fareMeta.textContent="Pune ↔ Akkalkot • Special Round Trip package";
+    fareBreakup.innerHTML=
+      `<div><span>Special package</span><strong>${money(total)}</strong></div>`+
+      `<div><span>Toll / Parking</span><strong>Extra</strong></div>`+
+      `<div><span>Night charge</span><strong>₹1,200 if applicable</strong></div>`+
+      `<div><span>Driver allowance</span><strong>₹300 if applicable</strong></div>`;
+    return;
+  }
+
+  const km=findDestinationDistance(destination);
   if(!km){
     fareAmount.textContent="Fare on enquiry";
-    fareMeta.textContent="This destination is not in our estimate list.";
+    fareMeta.textContent="Destination found in the Maharashtra list, but no preset distance is available.";
     fareBreakup.innerHTML="<div><span>Final fare</span><strong>Confirm on WhatsApp</strong></div>";
     return;
   }
 
   const oneWay=roundFare(km*RATE_PER_KM);
-  const total=isRound ? roundFare(oneWay*2) : oneWay;
-
+  const total=isRound?roundFare(oneWay*2):oneWay;
   fareAmount.textContent=money(total);
-  fareMeta.textContent=`Approx. ${km} km ${isRound?"round trip":"one way"} from Pune`;
+  fareMeta.textContent=`Approx. ${km} km ${isRound?"round trip":"one way"} • ${vehicleInput.value}`;
   fareBreakup.innerHTML=
     `<div><span>Distance</span><strong>${km} km</strong></div>`+
     `<div><span>Cab fare (₹15/km)</span><strong>${money(total)}</strong></div>`+
@@ -488,11 +549,12 @@ function calculateFare(){
     `<div><span>Driver allowance</span><strong>₹300 if applicable</strong></div>`;
 }
 
-destinationInput.addEventListener("input",calculateFare);
-destinationInput.addEventListener("change",calculateFare);
-destinationInput.addEventListener("blur",calculateFare);
-pickupInput.addEventListener("input",calculateFare);
+["input","change","blur"].forEach(ev=>{
+  destinationInput.addEventListener(ev,calculateFare);
+  pickupInput.addEventListener(ev,calculateFare);
+});
 tripInput.addEventListener("change",calculateFare);
+vehicleInput.addEventListener("change",calculateFare);
 
 function sendBooking(e){
   e.preventDefault();
@@ -502,10 +564,23 @@ function sendBooking(e){
     document.getElementById("mobile").focus();
     return;
   }
+  if(!dateInput.value){
+    alert("Please select your travel date.");
+    dateInput.focus();
+    return;
+  }
+  if(new Date(dateInput.value+"T00:00:00")<new Date(getLocalDate()+"T00:00:00")){
+    alert("Please select today or a future travel date.");
+    dateInput.focus();
+    return;
+  }
 
   calculateFare();
+  const bookingId=makeBookingId();
+  bookingIdBox.style.display="block";
+  bookingIdBox.textContent=`🔖 Booking Reference: ${bookingId}`;
 
-  const fareText=fareAmount.textContent==="₹—" ? "Fare on enquiry" : fareAmount.textContent;
+  const fareText=fareAmount.textContent||"Fare on enquiry";
   const data={
     name:document.getElementById("name").value.trim(),
     mobile,
@@ -519,26 +594,35 @@ function sendBooking(e){
     fare:fareText
   };
 
-  const msg=`🚕 NEW BOOKING REQUEST
+  const msg=`🚕 *NEW KAUTUK BOOKING*
 
+🔖 Booking ID: ${bookingId}
 👤 Name: ${data.name}
 📱 Mobile: ${data.mobile}
 📍 Pickup: ${data.pickup}
 🏁 Destination: ${data.destination}
-📅 Date: ${data.date}
+📅 Travel Date: ${data.date}
 🔄 Trip: ${data.trip}
 🚗 Vehicle: ${data.vehicle}
 👥 Passengers: ${data.passengers}
 💰 Estimated Fare: ${data.fare}
-💳 Rate: ₹15/km
+💳 Rate: ₹15/km where applicable
 🅿️ Toll/Parking: Extra
 🌙 Night Charge: ₹1,200 if applicable
 👨‍✈️ Driver Allowance: ₹300 if applicable
 📝 Details: ${data.details}
 
-*Estimated fare only. Final fare to be confirmed by Kautuk Tours & Travels.*`;
+Please confirm availability and final fare.`;
 
-  window.location.href="https://wa.me/918888926336?text="+encodeURIComponent(msg);
+  const waText=encodeURIComponent(msg);
+const waApp="whatsapp://send?phone=918888926336&text="+waText;
+const waWeb="https://api.whatsapp.com/send?phone=918888926336&text="+waText;
+try{
+  window.location.href=waApp;
+  setTimeout(()=>{ window.location.href=waWeb; },1200);
+}catch(err){
+  window.location.href=waWeb;
+}
 }
 </script>
 </body>

@@ -474,6 +474,7 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
 const dateInput=document.getElementById("date");
 const pickupInput=document.getElementById("pickup");
 const destinationInput=document.getElementById("destination");
+const pickupTimeInput=document.getElementById("pickupTime");
 const tripInput=document.getElementById("trip");
 const vehicleInput=document.getElementById("vehicle");
 const detailsInput=document.getElementById("details");
@@ -681,7 +682,7 @@ Please confirm availability and final fare.`;
   // Use the official wa.me URL first; it opens WhatsApp on Android/iPhone
   // and falls back to the browser when the app is unavailable.
   const waUrl="https://wa.me/918888926336?text="+waText;
-  // Direct navigation avoids Android popup blocking and opens WhatsApp reliably.
+  // Direct navigation avoids Android popup blocking.
   window.location.href=waUrl;
 }
 </script>

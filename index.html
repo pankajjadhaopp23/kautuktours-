@@ -55,12 +55,12 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
 </style>
 </head>
 <body>
-<div class="top-strip">📞 88889 26336 &nbsp; • &nbsp; 💬 WhatsApp Booking &nbsp; • &nbsp; 📍 Pune, Maharashtra</div><header><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark">🚕</span>KAUTUK TOURS & TRAVELS<span>PUNE • CAB • TOURS • TRAVELS</span></a><nav><a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#gallery">Gallery</a><a class="nav-book" href="#booking">Book Now</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
+<div class="top-strip">📞 88889 26336 &nbsp; • &nbsp; 💬 WhatsApp Booking &nbsp; • &nbsp; 📍 Pune, Maharashtra</div><header><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark">🚕</span>KAUTUK TOURS & TRAVELS<span>PUNE • CAB • TOURS • TRAVELS</span></a><nav><a href="#services">Services</a><a href="#smart-fare">Fare</a><a href="#vehicles">Vehicles</a><a href="#gallery">Gallery</a><a class="nav-book" href="#booking">Book Now</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
 <main id="top">
 <section class="hero"><div class="wrap hero-inner"><div class="badge"><span class="dot"></span> Reliable Travel Partner in Pune</div><h1>Your Journey,<br><span>Our Responsibility.</span></h1><p>Comfortable cab services, airport transfers, outstation trips and customized tours for families, groups and businesses.</p><div class="trust-row"><span class="trust-pill">✓ Transparent booking</span><span class="trust-pill">✓ Direct WhatsApp</span><span class="trust-pill">✓ 36 Districts • 358 Talukas</span></div><div class="actions"><a class="btn primary" href="#booking">🚕 Book Your Trip</a><a class="btn light" href="tel:+918888926336">📞 Call Now</a><a class="btn outline" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section>
 <section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What we offer</div><h2>Travel Services</h2><p>Simple, comfortable and dependable travel solutions from Pune.</p></div><div class="grid"><div class="card"><div class="icon">🚕</div><h3>Local Cab</h3><p>Pune local travel, hourly and point-to-point cab service.</p></div><div class="card"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>Pune airport pickup and drop with reliable timing.</p></div><div class="card"><div class="icon">🛣️</div><h3>Outstation Trips</h3><p>Pune to Mumbai, Solapur, Tuljapur, Shirdi and more.</p></div><div class="card"><div class="icon">🧳</div><h3>Tour Packages</h3><p>Family trips, one-day tours and customized travel plans.</p></div><div class="card"><div class="icon">🏢</div><h3>Corporate Travel</h3><p>Business travel and employee transportation support.</p></div><div class="card"><div class="icon">🎉</div><h3>Events & Functions</h3><p>Cab arrangements for weddings, events and group travel.</p></div></div></div></section>
 
-<section id="packages"><div class="wrap">
+<section id="smart-fare"><div class="wrap"><div class="section-head"><div class="eyebrow">Smart pricing</div><h2>Smart Upfront Fare</h2><p>Enter pickup, destination and pickup time to see an estimate before sending the booking.</p></div><div class="prof-grid"><div class="prof-card"><div class="prof-icon">📍</div><h3>Distance-based</h3><p>Route distance is the main fare input, with a clear estimate shown before booking.</p></div><div class="prof-card"><div class="prof-icon">🚗</div><h3>Vehicle-aware</h3><p>Different vehicle categories use configurable pricing factors.</p></div><div class="prof-card"><div class="prof-icon">📈</div><h3>Time-aware</h3><p>Peak and night factors can adjust the estimate, inspired by the upfront-pricing concept.</p></div></div></div></section><section id="packages"><div class="wrap">
 <div class="section-head"><div class="eyebrow">Popular routes</div><h2>Simple Packages</h2><p>Popular options are shown as starting/confirmed examples. Final availability and applicable extras are confirmed before booking.</p></div>
 <div class="package-grid">
 <div class="package-card featured"><span class="mini-tag">SPECIAL</span><div class="icon">🛕</div><h3>Pune ↔ Akkalkot</h3><div class="package-price">₹9,000</div><p>Round Trip package</p><div class="package-list"><div>Maruti Ertiga CNG option</div><div>Toll / parking extra</div><div>Night ₹1,200 if applicable</div><div>Driver allowance ₹300 if applicable</div></div><a class="btn primary" style="width:100%;margin-top:17px" href="#booking">Book Akkalkot</a></div>
@@ -485,23 +485,40 @@ const bookingIdBox=document.getElementById("bookingIdBox");
 const pickupMap=document.getElementById("pickupMap");
 const destinationMap=document.getElementById("destinationMap");
 
-const RATE_PER_KM=15;
-const MIN_FARE=500;
-const ROUNDING=50;
+const PRICING={
+  base:200,
+  perKm:15,
+  minFare:500,
+  roundStep:50,
+  peakMultiplier:1.10,
+  nightMultiplier:1.15,
+  vehicleMultiplier:{
+    "Maruti Ertiga CNG":1.00,
+    "Dzire / Etios":0.90,
+    "Innova / Crysta":1.35,
+    "Tempo Traveller":1.80
+  }
+};
 
-/* Approximate one-way distances from Pune for reliable offline estimates. */
+/* Known Pune-route estimates. Unknown destinations get a clearly labelled provisional estimate. */
 const DESTINATIONS={
   "mumbai":150,"lonavala":65,"mahabaleshwar":120,"shirdi":200,"tuljapur":300,
   "solapur":250,"kolhapur":230,"nashik":210,"satara":115,"sangli":230,
   "ahmednagar":120,"ahilyanagar":120,"pandharpur":210,"akkalkot":300,
   "aurangabad":235,"sambhajinagar":235,"chhatrapati sambhajinagar":235,
-  "goa":450,"hyderabad":560,"bhimashankar":110,"jejuri":50
+  "goa":450,"hyderabad":560,"bhimashankar":110,"jejuri":50,
+  "pune":10,"alandi":25,"dehu":40,"baramati":100,"indapur":150,"shirur":70,
+  "junnar":95,"daund":80,"bhor":65,"mulshi":55,"velhe":65,
+  "achalpur":680,"amravati":650,"akola":540,"washim":500,"buldhana":470,
+  "yavatmal":620,"nagpur":720,"wardha":650,"bhandara":770,"gondia":820,
+  "chandrapur":800,"gadchiroli":850,"jalgaon":420,"dhule":380,"nandurbar":470,
+  "jalna":350,"parbhani":440,"nanded":500,"hingoli":430,"beed":300,"latur":360,
+  "dharashiv":290,"ratnagiri":310,"sindhudurg":430,"raigad":120,"thane":150,
+  "palghar":210,"mumbai suburban":150
 };
 
-/* Confirmed special package requested for Kautuk Tours. */
-const SPECIAL_ROUND_TRIP={
-  "akkalkot":9000
-};
+/* Business-controlled special package. */
+const SPECIAL_ROUND_TRIP={"akkalkot":9000};
 
 function getLocalDate(){
   const d=new Date();
@@ -513,74 +530,81 @@ function money(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
 function norm(v){return v.toLowerCase().trim().replace(/[^a-z0-9]+/g," ").replace(/\s+/g," ")}
 function findDestinationDistance(name){
   const n=norm(name);
-  if(DESTINATIONS[n]) return DESTINATIONS[n];
+  if(DESTINATIONS[n]!=null)return DESTINATIONS[n];
   for(const key of Object.keys(DESTINATIONS)){
-    if(n.includes(key)||key.includes(n)) return DESTINATIONS[key];
+    if(n.includes(key)||key.includes(n))return DESTINATIONS[key];
   }
   return null;
 }
-function roundFare(n){return Math.max(MIN_FARE,Math.ceil(n/ROUNDING)*ROUNDING)}
+function roundFare(n){return Math.max(PRICING.minFare,Math.ceil(n/PRICING.roundStep)*PRICING.roundStep)}
 function makeBookingId(){
   const d=new Date();
-  const y=d.getFullYear().toString().slice(-2);
-  const m=String(d.getMonth()+1).padStart(2,"0");
-  const day=String(d.getDate()).padStart(2,"0");
-  const rnd=Math.floor(1000+Math.random()*9000);
-  return `KT-${y}${m}${day}-${rnd}`;
+  return `KT-${d.getFullYear().toString().slice(-2)}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}-${Math.floor(1000+Math.random()*9000)}`;
 }
-function mapUrl(place){
-  return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place);
-}
+function mapUrl(place){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place)}
 function updateMaps(){
-  const p=pickupInput.value.trim(), d=destinationInput.value.trim();
+  const p=pickupInput.value.trim(),d=destinationInput.value.trim();
   pickupMap.href=p?mapUrl(p):"#";
   destinationMap.href=d?mapUrl(d):"#";
   pickupMap.style.pointerEvents=p?"auto":"none";
   destinationMap.style.pointerEvents=d?"auto":"none";
 }
+function timeHour(){
+  const t=pickupTimeInput&&pickupTimeInput.value?pickupTimeInput.value:"";
+  return t?Number(t.split(":")[0]):new Date().getHours();
+}
+function demandFactor(){
+  const h=timeHour();
+  return ((h>=7&&h<=10)||(h>=17&&h<=21))?PRICING.peakMultiplier:1;
+}
+function nightFactor(){
+  const h=timeHour();
+  return (h>=23||h<6)?PRICING.nightMultiplier:1;
+}
 function calculateFare(){
-  const pickup=pickupInput.value.trim();
-  const destination=destinationInput.value.trim();
+  const pickup=pickupInput.value.trim(),destination=destinationInput.value.trim();
   updateMaps();
-  if(pickup.length<2||destination.length<2){
-    fareBox.classList.remove("show");
-    return;
-  }
+  if(pickup.length<2||destination.length<2){fareBox.classList.remove("show");return}
   fareBox.classList.add("show");
-  const key=norm(destination);
-  const isRound=tripInput.value==="Round Trip";
 
-  /* Special fixed round-trip package: Pune ↔ Akkalkot = ₹9,000. */
-  if(isRound && SPECIAL_ROUND_TRIP[key]){
-    const total=SPECIAL_ROUND_TRIP[key];
-    fareAmount.textContent=money(total);
+  const key=norm(destination),isRound=tripInput.value==="Round Trip";
+
+  if(isRound&&SPECIAL_ROUND_TRIP[key]){
+    fareAmount.textContent=money(SPECIAL_ROUND_TRIP[key]);
     fareMeta.textContent="Pune ↔ Akkalkot • Special Round Trip package";
     fareBreakup.innerHTML=
-      `<div><span>Special package</span><strong>${money(total)}</strong></div>`+
+      `<div><span>Special package</span><strong>₹9,000</strong></div>`+
       `<div><span>Toll / Parking</span><strong>Extra</strong></div>`+
       `<div><span>Night charge</span><strong>₹1,200 if applicable</strong></div>`+
       `<div><span>Driver allowance</span><strong>₹300 if applicable</strong></div>`;
     return;
   }
 
-  const km=findDestinationDistance(destination);
-  if(!km){
-    fareAmount.textContent="Fare on enquiry";
-    fareMeta.textContent="Destination found in the Maharashtra list, but no preset distance is available.";
-    fareBreakup.innerHTML="<div><span>Final fare</span><strong>Confirm on WhatsApp</strong></div>";
-    return;
+  let km=findDestinationDistance(destination);
+  let source="Route estimate";
+  if(km===null){
+    km=50;
+    source="Provisional estimate • exact route confirmed on WhatsApp";
   }
 
-  const oneWay=roundFare(km*RATE_PER_KM);
-  const total=isRound?roundFare(oneWay*2):oneWay;
+  const distanceKm=isRound?km*2:km;
+  const vehicleFactor=PRICING.vehicleMultiplier[vehicleInput.value]||1;
+  const demand=demandFactor(),night=nightFactor();
+  const baseDistance=PRICING.base+distanceKm*PRICING.perKm;
+  const total=roundFare(baseDistance*vehicleFactor*demand*night);
+
   fareAmount.textContent=money(total);
-  fareMeta.textContent=`Approx. ${km} km ${isRound?"round trip":"one way"} • ${vehicleInput.value}`;
+  fareMeta.textContent=`Estimated ${Math.round(distanceKm)} km • ${vehicleInput.value}`;
   fareBreakup.innerHTML=
-    `<div><span>Distance</span><strong>${km} km</strong></div>`+
-    `<div><span>Cab fare (₹15/km)</span><strong>${money(total)}</strong></div>`+
+    `<div><span>Distance</span><strong>${Math.round(distanceKm)} km</strong></div>`+
+    `<div><span>Base + ₹15/km</span><strong>${money(baseDistance)}</strong></div>`+
+    `<div><span>Vehicle factor</span><strong>${vehicleFactor.toFixed(2)}×</strong></div>`+
+    (demand>1?`<div><span>Peak-time factor</span><strong>${demand.toFixed(2)}×</strong></div>`:"")+
+    (night>1?`<div><span>Night factor</span><strong>${night.toFixed(2)}×</strong></div>`:"")+
     `<div><span>Toll / Parking</span><strong>Extra</strong></div>`+
     `<div><span>Night charge</span><strong>₹1,200 if applicable</strong></div>`+
-    `<div><span>Driver allowance</span><strong>₹300 if applicable</strong></div>`;
+    `<div><span>Driver allowance</span><strong>₹300 if applicable</strong></div>`+
+    `<div><span>Estimate source</span><strong>${source}</strong></div>`;
 }
 
 ["input","change","blur"].forEach(ev=>{
@@ -589,6 +613,7 @@ function calculateFare(){
 });
 tripInput.addEventListener("change",calculateFare);
 vehicleInput.addEventListener("change",calculateFare);
+if(pickupTimeInput)pickupTimeInput.addEventListener("change",calculateFare);
 
 function formatTime12h(value){if(!value)return"Not specified";const [h,m]=value.split(":").map(Number);const ap=h>=12?"PM":"AM";const hh=(h%12)||12;return `${hh}:${String(m).padStart(2,"0")} ${ap}`}function formatTime12h(value){
   if(!value)return "Not specified";
@@ -653,11 +678,10 @@ function sendBooking(e){
 Please confirm availability and final fare.`;
 
   const waText=encodeURIComponent(msg);
-  const waApp="whatsapp://send?phone=918888926336&text="+waText;
-  const waWeb="https://api.whatsapp.com/send?phone=918888926336&text="+waText;
-
-  window.location.href=waApp;
-  setTimeout(()=>{window.location.href=waWeb;},1200);
+  // Use the official wa.me URL first; it opens WhatsApp on Android/iPhone
+  // and falls back to the browser when the app is unavailable.
+  const waUrl="https://wa.me/918888926336?text="+waText;
+  window.open(waUrl,"_blank","noopener,noreferrer");
 }
 </script>
 </body>

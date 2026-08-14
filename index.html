@@ -590,7 +590,14 @@ function calculateFare(){
 tripInput.addEventListener("change",calculateFare);
 vehicleInput.addEventListener("change",calculateFare);
 
-function formatTime12h(value){if(!value)return"Not specified";const [h,m]=value.split(":").map(Number);const ap=h>=12?"PM":"AM";const hh=(h%12)||12;return `${hh}:${String(m).padStart(2,"0")} ${ap}`}function sendBooking(e){
+function formatTime12h(value){if(!value)return"Not specified";const [h,m]=value.split(":").map(Number);const ap=h>=12?"PM":"AM";const hh=(h%12)||12;return `${hh}:${String(m).padStart(2,"0")} ${ap}`}function formatTime12h(value){
+  if(!value)return "Not specified";
+  const [h,m]=value.split(":").map(Number);
+  const ap=h>=12?"PM":"AM";
+  const hh=(h%12)||12;
+  return `${hh}:${String(m).padStart(2,"0")} ${ap}`;
+}
+function sendBooking(e){
   e.preventDefault();
   const mobile=document.getElementById("mobile").value.replace(/\D/g,"");
   if(!/^[0-9]{10}$/.test(mobile)){
@@ -603,6 +610,11 @@ function formatTime12h(value){if(!value)return"Not specified";const [h,m]=value.
     dateInput.focus();
     return;
   }
+  if(!pickupTimeInput.value){
+    alert("Please select your pickup time.");
+    pickupTimeInput.focus();
+    return;
+  }
   if(new Date(dateInput.value+"T00:00:00")<new Date(getLocalDate()+"T00:00:00")){
     alert("Please select today or a future travel date.");
     dateInput.focus();
@@ -610,55 +622,42 @@ function formatTime12h(value){if(!value)return"Not specified";const [h,m]=value.
   }
 
   calculateFare();
+
   const bookingId=makeBookingId();
   bookingIdBox.style.display="block";
   bookingIdBox.textContent=`🔖 Booking Reference: ${bookingId}`;
 
   const fareText=fareAmount.textContent||"Fare on enquiry";
-  const data={
-    name:document.getElementById("name").value.trim(),
-    mobile,
-    pickup:pickupInput.value.trim(),
-    destination:destinationInput.value.trim(),
-    date:dateInput.value,
-    trip:tripInput.value,
-    vehicle:vehicleInput.value,
-    passengers:document.getElementById("passengers").value,
-    details:detailsInput.value.trim()||"None",
-    pickupTime: (detailsInput.value.match(/(?:^|\s)(\d{1,2}:\d{2}\s*(?:am|pm)?)(?:\s|$)/i)||[])[1] || "Not specified",
-    fare:fareText
-  };
+  const details=detailsInput.value.trim()||"None";
+  const pickupTime=formatTime12h(pickupTimeInput.value);
 
   const msg=`🚕 *NEW KAUTUK BOOKING*
 
 🔖 Booking ID: ${bookingId}
-👤 Name: ${data.name}
-📱 Mobile: ${data.mobile}
-📍 Pickup: ${data.pickup}
-🏁 Destination: ${data.destination}
-📅 Travel Date: ${data.date}
-🔄 Trip: ${data.trip}
-🚗 Vehicle: ${data.vehicle}
-👥 Passengers: ${data.passengers}
-💰 Estimated Fare: ${data.fare}
+👤 Name: ${document.getElementById("name").value.trim()}
+📱 Mobile: ${mobile}
+📍 Pickup: ${pickupInput.value.trim()}
+🏁 Destination: ${destinationInput.value.trim()}
+📅 Travel Date: ${dateInput.value}
+🕐 Pickup Time: ${pickupTime}
+🔄 Trip: ${tripInput.value}
+🚗 Vehicle: ${vehicleInput.value}
+👥 Passengers: ${document.getElementById("passengers").value}
+💰 Estimated Fare: ${fareText}
 💳 Rate: ₹15/km where applicable
 🅿️ Toll/Parking: Extra
 🌙 Night Charge: ₹1,200 if applicable
 👨‍✈️ Driver Allowance: ₹300 if applicable
-🕐 Pickup Time: ${data.pickupTime}
-📝 Trip Details: ${data.details}
+📝 Trip Details: ${details}
 
 Please confirm availability and final fare.`;
 
   const waText=encodeURIComponent(msg);
-const waApp="whatsapp://send?phone=918888926336&text="+waText;
-const waWeb="https://api.whatsapp.com/send?phone=918888926336&text="+waText;
-try{
+  const waApp="whatsapp://send?phone=918888926336&text="+waText;
+  const waWeb="https://api.whatsapp.com/send?phone=918888926336&text="+waText;
+
   window.location.href=waApp;
-  setTimeout(()=>{ window.location.href=waWeb; },1200);
-}catch(err){
-  window.location.href=waWeb;
-}
+  setTimeout(()=>{window.location.href=waWeb;},1200);
 }
 </script>
 </body>

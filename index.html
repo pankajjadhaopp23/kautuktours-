@@ -681,7 +681,8 @@ Please confirm availability and final fare.`;
   // Use the official wa.me URL first; it opens WhatsApp on Android/iPhone
   // and falls back to the browser when the app is unavailable.
   const waUrl="https://wa.me/918888926336?text="+waText;
-  window.open(waUrl,"_blank","noopener,noreferrer");
+  // Direct navigation avoids Android popup blocking and opens WhatsApp reliably.
+  window.location.href=waUrl;
 }
 </script>
 </body>

@@ -1,258 +1,578 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Kautuk Tours & Travels | Pune Cab Booking</title>
-<meta name="description" content="Kautuk Tours & Travels Pune — local rental, outstation, airport transfers and tour bookings. Simple fare estimate and WhatsApp booking.">
-<meta name="theme-color" content="#10172a">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Kautuk Tours & Travels Pune | Cab Booking, Airport & Outstation</title>
+<meta name="description" content="Kautuk Tours & Travels Pune offers reliable Ertiga CNG cab booking, airport transfers, outstation trips, local cab service and customized tours.">
+<meta name="theme-color" content="#111827">
 <style>
-:root{--ink:#10172a;--ink2:#1d2742;--brand:#6d28d9;--brand2:#8b5cf6;--gold:#f5b91a;--green:#18b95b;--bg:#f6f7fb;--card:#fff;--text:#172033;--muted:#64748b;--line:#e6e8ef;--danger:#dc2626;--shadow:0 18px 55px rgba(16,23,42,.10)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{max-width:1160px;margin:auto;padding:0 18px}
-.top{background:#080c16;color:#e5e7eb;text-align:center;font-size:11px;font-weight:800;padding:7px}.top a{color:#fff}
-header{position:sticky;top:0;z-index:1000;background:rgba(16,23,42,.97);color:#fff;box-shadow:0 8px 30px #0002;backdrop-filter:blur(10px)}.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:10px;font-weight:950;font-size:16px;line-height:1.1}.brand small{display:block;color:var(--gold);font-size:8px;letter-spacing:2px;margin-top:5px}.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),#ffcf4a);color:var(--ink);font-size:22px;font-weight:1000;box-shadow:0 7px 20px #f5b91a44}nav{display:flex;gap:3px;align-items:center}nav a{padding:9px 10px;border-radius:10px;font-size:12px;font-weight:850}nav a:hover{background:#fff1}.navcta{background:var(--gold);color:var(--ink)!important}
-.hero{color:#fff;background:radial-gradient(circle at 85% 15%,#8b5cf655,transparent 34%),linear-gradient(135deg,#0b1020,#21164b 55%,#5b21b6);padding:78px 0 70px}.heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 13px;border:1px solid #ffffff2b;background:#ffffff10;border-radius:999px;font-size:12px;font-weight:850}.pulse{width:8px;height:8px;border-radius:50%;background:var(--gold)}h1{font-size:clamp(40px,6vw,67px);line-height:1.02;letter-spacing:-2.5px;margin:20px 0 16px}h1 span{color:var(--gold)}.heroText{font-size:17px;color:#dbe4f0;max-width:680px}.heroActions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:13px;padding:13px 19px;font-weight:950;cursor:pointer;font-size:14px}.gold{background:linear-gradient(135deg,var(--gold),#f59e0b);color:var(--ink)}.white{background:#fff;color:var(--ink)}.green{background:var(--green);color:#fff}.ghost{background:#ffffff0d;color:#fff;border:1px solid #ffffff33}
-.heroCard{background:#fff;color:var(--text);border-radius:24px;padding:22px;box-shadow:0 25px 70px #0004}.heroCard h3{margin:0 0 4px;font-size:21px}.heroCard p{margin:0 0 17px;color:var(--muted);font-size:13px}.mini{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini div{padding:12px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;font-size:12px;font-weight:850}.mini b{display:block;font-size:18px;margin-top:3px;color:var(--brand)}
-section{padding:62px 0}.head{text-align:center;margin-bottom:30px}.eyebrow{color:var(--brand2);font-size:10px;font-weight:950;letter-spacing:2.3px;text-transform:uppercase}h2{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:7px 0 8px}.head p{max-width:700px;margin:auto;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:21px;box-shadow:0 8px 28px #0f172a0a}.icon{width:48px;height:48px;border-radius:14px;background:#f3f0ff;display:grid;place-items:center;font-size:23px;margin-bottom:11px}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:13px}
-.booking{background:linear-gradient(135deg,#eef2ff,#fff 55%,#f7f3ff)}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}.step{background:#fff;border:1px solid var(--line);border-radius:15px;padding:14px;font-size:12px;font-weight:850}.step b{display:block;color:var(--brand);font-size:18px}
-.form{max-width:940px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}label{font-size:12px;font-weight:900}input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d9deea;border-radius:12px;background:#fff;outline:0;font-size:14px}input:focus,select:focus,textarea:focus{border-color:var(--brand2);box-shadow:0 0 0 4px #8b5cf61a}textarea{min-height:90px;resize:vertical}.help{font-size:11px;color:var(--muted)}.fare{margin-top:16px;border:1px solid #ddd6fe;background:#faf5ff;border-radius:18px;padding:18px;text-align:center}.fareTitle{font-size:10px;letter-spacing:1.6px;font-weight:950;color:#7c3aed}.fareAmount{font-size:35px;font-weight:1000;color:var(--ink)}.fareKm{font-size:13px;color:var(--muted)}.break{max-width:520px;margin:11px auto;text-align:left;font-size:12px}.break div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed #d9dbe3;padding:6px 0}.advance{margin-top:13px;padding:13px;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;color:#92400e}.advance b{display:block;font-size:19px}.routeBtns{display:flex;gap:8px;margin-top:10px}.routeBtns a{flex:1;text-align:center;padding:9px;border:1px solid var(--line);border-radius:10px;font-size:12px;font-weight:850}.status{display:none;margin-top:12px;padding:11px;border-radius:11px;font-size:12px;font-weight:800;text-align:center}.status.ok{display:block;background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}.status.err{display:block;background:#fef2f2;color:#991b1b;border:1px solid #fecaca}
-.local{background:linear-gradient(135deg,#f7f3ff,#fff,#fffbeb)}.packages{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.pkg{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}.pkg.feature{border-color:#f59e0b;box-shadow:0 15px 40px #f59e0b20}.pkg h3{margin:0;font-size:17px}.price{font-size:28px;font-weight:1000;margin:8px 0}.pkg ul{margin:0;padding-left:17px;color:#475569;font-size:12px}.pkg li{margin:4px 0}
-.destination{background:#fff}.destGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:stretch}.destCard{background:linear-gradient(135deg,#0f172a,#251a55);color:#fff;border-radius:24px;padding:28px}.destCard p{color:#cbd5e1;font-size:13px}.destList{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.destTag{padding:8px 10px;border-radius:999px;background:#ffffff12;border:1px solid #ffffff22;font-size:11px}
-.faq{max-width:880px;margin:auto;display:grid;gap:9px}details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px}summary{font-weight:900;cursor:pointer}details p{color:var(--muted);font-size:13px;margin:7px 0 0}
-.contact{background:linear-gradient(135deg,#0f172a,#1e1b4b);color:#fff;text-align:center}.contact p{color:#cbd5e1;max-width:700px;margin:8px auto}footer{background:#080c16;color:#94a3b8;text-align:center;padding:22px;font-size:12px}.sticky{display:none}
-@media(max-width:900px){.heroGrid,.destGrid{grid-template-columns:1fr}nav{display:none}.packages{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.heroCard{max-width:600px;margin:auto}}
-@media(max-width:600px){section{padding:52px 0}.form{padding:18px}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.packages{grid-template-columns:1fr}.hero{padding:60px 0}.sticky{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:2000;gap:6px;padding:7px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -8px 25px #0f172a14}.sticky a{flex:1;text-align:center;padding:10px;border-radius:10px;font-size:12px;font-weight:950}.sticky .book{background:var(--gold);color:var(--ink)}.sticky .wa{background:var(--green);color:#fff}}
+:root{--navy:#0f172a;--navy2:#111827;--purple:#6d28d9;--purple2:#8b5cf6;--gold:#fbbf24;--gold2:#f59e0b;--text:#172033;--muted:#64748b;--line:#e5e7eb;--bg:#f7f8fc;--white:#fff;--green:#22c55e;--shadow:0 18px 50px rgba(15,23,42,.10)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:82px}body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}a{text-decoration:none;color:inherit}.wrap{max-width:1160px;margin:auto;padding:0 20px}
+header{position:sticky;top:0;z-index:1000;background:rgba(15,23,42,.94);backdrop-filter:blur(14px);color:#fff;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:0 8px 30px rgba(15,23,42,.16)}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:19px;font-weight:900;letter-spacing:.2px;line-height:1.15}.brand span{display:block;color:var(--gold);font-size:10px;letter-spacing:2.2px;margin-top:4px}.brand-mark{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;border-radius:11px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);margin-right:9px;vertical-align:middle;box-shadow:0 7px 20px rgba(251,191,36,.22)}
+nav{display:flex;align-items:center;gap:8px}nav a{color:#e5e7eb;font-weight:750;font-size:14px;padding:9px 12px;border-radius:10px;transition:.2s}nav a:hover{background:#ffffff12;color:#fff}nav .nav-book{background:var(--gold);color:var(--navy)}nav .nav-book:hover{background:#fcd34d}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,rgba(139,92,246,.35),transparent 35%),linear-gradient(135deg,#0b1120 0%,#1e1b4b 52%,#5b21b6 100%);color:#fff;padding:92px 0 84px}.hero:after{content:"";position:absolute;inset:auto -10% -80px;height:180px;background:var(--bg);border-radius:50% 50% 0 0/35% 35% 0 0}.hero-inner{position:relative;z-index:1;text-align:center}.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #ffffff2b;background:#ffffff12;padding:9px 16px;border-radius:999px;font-weight:750;font-size:13px;box-shadow:0 8px 25px #0002}.dot{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px #fbbf241a}h1{font-size:clamp(42px,7vw,70px);line-height:1.02;letter-spacing:-2px;margin:24px 0 18px}.hero h1 span{color:var(--gold)}.hero p{max-width:760px;margin:0 auto 30px;font-size:18px;color:#e2e8f0}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:14px;font-weight:850;border:1px solid transparent;cursor:pointer;font-size:15px;transition:transform .18s,box-shadow .18s,background .18s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px #0002}.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 10px 25px rgba(245,158,11,.22)}.light{background:#fff;color:var(--navy)}.outline{border-color:#ffffff55;color:#fff;background:#ffffff0b}.wa-btn{background:var(--green);color:#fff}
+section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebrow{color:var(--purple2);font-size:11px;font-weight:900;letter-spacing:2.4px;text-transform:uppercase}.section-head h2{font-size:clamp(29px,4vw,40px);line-height:1.15;margin:8px 0 10px;letter-spacing:-.8px}.section-head p{color:var(--muted);max-width:650px;margin:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:18px}.card{background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:0 8px 28px rgba(15,23,42,.06);transition:transform .2s,box-shadow .2s,border-color .2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#ddd6fe}.icon{width:50px;height:50px;display:grid;place-items:center;border-radius:15px;background:#f5f3ff;font-size:26px;margin-bottom:14px}.card h3{margin-bottom:7px;font-size:18px}.card p{color:var(--muted);font-size:14px}.vehicle{overflow:hidden;padding:0}.vehicle img{width:100%;height:190px;object-fit:cover;background:#eee;display:block}.vehicle .body{padding:20px}.vehicle .tag{display:inline-block;margin-top:12px;padding:5px 9px;border-radius:999px;background:#ecfdf5;color:#15803d;font-size:11px;font-weight:850}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-auto-rows:180px;gap:12px}.gallery img{width:100%;height:100%;object-fit:cover;border-radius:18px;background:#ddd;box-shadow:0 8px 25px #0f172a0d}.gallery img:first-child{grid-row:span 2}
+.booking{background:linear-gradient(135deg,#eef2ff 0%,#fff 55%,#f5f3ff 100%)}.form{background:#fff;border:1px solid #e8eaf0;border-radius:26px;padding:30px;max-width:850px;margin:auto;box-shadow:var(--shadow)}.form-top{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid #eef0f4}.form-icon{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#f5f3ff;font-size:22px}.form-top h3{font-size:18px}.form-top p{font-size:13px;color:var(--muted)}.formgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-weight:800;font-size:13px;color:#334155}input,select,textarea{width:100%;padding:14px 15px;border:1px solid #dbe0e8;border-radius:13px;font-size:15px;background:#fff;color:var(--text);outline:none;transition:.18s}input:focus,select:focus,textarea:focus{border-color:var(--purple2);box-shadow:0 0 0 4px #8b5cf61a}textarea{min-height:110px;resize:vertical}.form .btn{width:100%;margin-top:18px}.note{text-align:center;color:var(--muted);font-size:12px;margin-top:11px}
+.contact{background:linear-gradient(135deg,#0f172a,#1e1b4b);color:#fff;text-align:center}.contact h2{font-size:clamp(30px,4vw,42px)}.contact p{color:#cbd5e1;max-width:700px;margin:10px auto 26px}.contact .actions a{margin:4px}footer{background:#090e19;color:#94a3b8;text-align:center;padding:24px;font-size:13px}
+.sticky{position:fixed;bottom:0;left:0;right:0;z-index:2000;display:flex;gap:7px;padding:8px max(8px,env(safe-area-inset-right)) max(8px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid #e5e7eb;box-shadow:0 -8px 30px #0f172a12}.sticky a{flex:1;text-align:center;padding:11px 6px;border-radius:13px;font-weight:900;font-size:13px}.call{background:#fff7d6;color:#92400e}.book{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}.sticky .wa{background:var(--green);color:#fff}
 
-<style>
-.invoicePaper{background:#fff;color:#111827;border:1px solid #dfe3ea;border-radius:18px;padding:25px;max-width:760px;margin:auto;box-shadow:0 18px 45px #0f172a14}
-.invHead{display:flex;justify-content:space-between;gap:20px;border-bottom:2px solid #111827;padding-bottom:15px}.invBrand{font-size:23px;font-weight:1000}.invMeta{text-align:right;font-size:12px}.invTable{width:100%;border-collapse:collapse;margin-top:18px;font-size:13px}.invTable th,.invTable td{border-bottom:1px solid #e5e7eb;padding:8px;text-align:left}.invTable th:last-child,.invTable td:last-child{text-align:right}.invTotal{margin-left:auto;max-width:320px;margin-top:15px}.invTotal div{display:flex;justify-content:space-between;padding:7px 0}.invGrand{font-size:20px;font-weight:1000;border-top:2px solid #111827}.invThank{text-align:center;margin-top:22px;padding-top:15px;border-top:1px dashed #cbd5e1;font-size:12px;color:#64748b}.invActions{display:flex;gap:8px;justify-content:center;margin-top:15px}
-@media print{body>*{display:none!important}#invoice,#invoiceOutput,#invoiceOutput *{display:block!important}.invoicePaper{box-shadow:none;border:0;max-width:none}#invoice{padding:0}.invActions{display:none!important}}
-.galleryGrid{display:grid;grid-template-columns:1.4fr .6fr;gap:16px}.galleryHero{background:linear-gradient(135deg,#0f172a,#4c1d95);color:#fff;border-radius:24px;padding:30px;min-height:250px;display:flex;flex-direction:column;justify-content:center}.galleryHero h3{font-size:30px;margin:8px 0}.galleryHero p{color:#cbd5e1}.carIcon{font-size:58px}.galleryInfo{background:#fff;border:1px solid var(--line);border-radius:24px;padding:25px;display:grid;grid-template-columns:1fr;gap:7px;align-content:center;box-shadow:var(--shadow)}.galleryInfo b{font-size:11px;color:#7c3aed;text-transform:uppercase;letter-spacing:1px;margin-top:7px}.galleryInfo span{font-weight:800}.routeHint{margin-top:10px;padding:11px 13px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;font-size:12px;color:var(--muted)}@media(max-width:850px){.galleryGrid{grid-template-columns:1fr}.galleryHero h3{font-size:24px}}
-</style>
+.fare-box{display:none;margin-top:18px;padding:18px 20px;border:1px solid #ddd6fe;border-radius:18px;background:linear-gradient(135deg,#faf5ff,#fff);text-align:center}
+.fare-box.show{display:block}.fare-label{font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:#7c3aed}
+.fare-amount{font-size:32px;font-weight:950;color:#111827;margin:3px 0}.fare-meta{font-size:12px;color:#64748b}
+.fare-breakup{display:grid;gap:5px;margin:12px auto 0;max-width:390px;text-align:left;font-size:13px;color:#475569}
+.fare-breakup div{display:flex;justify-content:space-between;gap:14px;border-bottom:1px dashed #e5e7eb;padding:5px 0}
+.fare-breakup strong{color:#111827}.fare-note{font-size:11px;color:#64748b;margin-top:10px}.fare-loading{font-size:14px;color:#64748b}
+@media(max-width:820px){nav{display:none}.hero{padding:72px 0 70px}.hero:after{bottom:-100px}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:155px}.gallery img:first-child{grid-row:span 1;grid-column:1/-1;height:210px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}section{padding:58px 0}.wrap{padding:0 16px}}
+@media(min-width:821px){.sticky{display:none}}
+@media(max-width:420px){h1{font-size:40px;letter-spacing:-1.2px}.hero p{font-size:16px}.actions .btn{width:100%}.form{padding:21px;border-radius:21px}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:175px}}
+
+.booking-id{display:none;margin:14px 0 0;padding:11px 14px;border-radius:13px;background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;font-size:13px;font-weight:850;text-align:center}
+.quick-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.quick-actions a{flex:1;min-width:140px;text-align:center;padding:10px 12px;border-radius:12px;font-weight:850;font-size:12px;border:1px solid #e5e7eb;background:#fff}
+.prof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.prof-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 28px rgba(15,23,42,.06)}.prof-card h3{margin:7px 0}.prof-card p{color:var(--muted);font-size:13px}.prof-icon{font-size:27px}
+@media(max-width:820px){.prof-grid{grid-template-columns:1fr}}
+
+/* Kautuk premium final layer */
+.top-strip{background:#070b14;color:#cbd5e1;font-size:11px;font-weight:800;padding:7px 0;text-align:center;letter-spacing:.2px}
+.trust-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px auto 0}
+.trust-pill{background:#ffffff12;border:1px solid #ffffff20;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:800;color:#e2e8f0}
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.package-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px;box-shadow:0 8px 28px rgba(15,23,42,.06);overflow:hidden}
+.package-card.featured{border-color:#f59e0b;box-shadow:0 16px 40px rgba(245,158,11,.12)}
+.package-card .mini-tag{position:absolute;top:14px;right:14px;background:#fff7d6;color:#92400e;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:900}
+.package-price{font-size:27px;font-weight:950;margin:12px 0 5px}
+.package-list{margin-top:13px;display:grid;gap:7px;color:#475569;font-size:13px}
+.package-list div:before{content:"✓";font-weight:900;color:#16a34a;margin-right:7px}
+.faq-grid{display:grid;gap:10px;max-width:850px;margin:auto}
+.faq-grid details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 18px}
+.faq-grid summary{font-weight:850;cursor:pointer}
+.faq-grid p{color:var(--muted);font-size:13px;margin-top:8px}
+.location-badge{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border-radius:11px;background:#eff6ff;color:#1d4ed8;font-size:11px;font-weight:900;margin-top:10px}
+@media(max-width:820px){.package-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="top">📞 <a href="tel:+918888926336">88889 26336</a> &nbsp; • &nbsp; 💬 Direct WhatsApp Booking &nbsp; • &nbsp; 📍 Ambegaon BK, Pune</div>
-<header><div class="wrap nav">
-<a class="brand" href="#home"><span class="logo">K</span><span>KAUTUK TOURS & TRAVELS<small>PUNE • CAB • TOURS • TRAVELS</small></span></a>
-<nav><a href="#services">Services</a><a href="#local">Local Rental</a><a href="#booking">Book</a><a href="#destinations">Destinations</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a class="navcta" href="#booking">Book Now</a></nav>
-</div></header>
+<div class="top-strip">📞 88889 26336 &nbsp; • &nbsp; 💬 WhatsApp Booking &nbsp; • &nbsp; 📍 Pune, Maharashtra</div><header><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark">🚕</span>KAUTUK TOURS & TRAVELS<span>PUNE • CAB • TOURS • TRAVELS</span></a><nav><a href="#services">Services</a><a href="#smart-fare">Fare</a><a href="#vehicles">Vehicles</a><a href="#gallery">Gallery</a><a class="nav-book" href="#booking">Book Now</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-inner"><div class="badge"><span class="dot"></span> Reliable Travel Partner in Pune</div><h1>Your Journey,<br><span>Our Responsibility.</span></h1><p>Comfortable cab services, airport transfers, outstation trips and customized tours for families, groups and businesses.</p><div class="trust-row"><span class="trust-pill">✓ Transparent booking</span><span class="trust-pill">✓ Direct WhatsApp</span><span class="trust-pill">✓ 36 Districts • 358 Talukas</span></div><div class="actions"><a class="btn primary" href="#booking">🚕 Book Your Trip</a><a class="btn light" href="tel:+918888926336">📞 Call Now</a><a class="btn outline" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">💬 WhatsApp</a></div></div></section>
+<section id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What we offer</div><h2>Travel Services</h2><p>Simple, comfortable and dependable travel solutions from Pune.</p></div><div class="grid"><div class="card"><div class="icon">🚕</div><h3>Local Cab</h3><p>Pune local travel, hourly and point-to-point cab service.</p></div><div class="card"><div class="icon">✈️</div><h3>Airport Transfers</h3><p>Pune airport pickup and drop with reliable timing.</p></div><div class="card"><div class="icon">🛣️</div><h3>Outstation Trips</h3><p>Pune to Mumbai, Solapur, Tuljapur, Shirdi and more.</p></div><div class="card"><div class="icon">🧳</div><h3>Tour Packages</h3><p>Family trips, one-day tours and customized travel plans.</p></div><div class="card"><div class="icon">🏢</div><h3>Corporate Travel</h3><p>Business travel and employee transportation support.</p></div><div class="card"><div class="icon">🎉</div><h3>Events & Functions</h3><p>Cab arrangements for weddings, events and group travel.</p></div></div></div></section>
 
-<main id="home">
-<section class="hero"><div class="wrap heroGrid">
-<div><span class="pill"><span class="pulse"></span> Trusted local travel partner • Pune</span>
-<h1>Travel Easy.<br><span>Book With Kautuk.</span></h1>
-<p class="heroText">Local rental, airport transfers, one-way & round-trip outstation cabs and tour planning — with simple booking and clear fare information.</p>
-<div class="heroActions"><a class="btn gold" href="#booking">🚕 Book Your Trip</a><a class="btn white" href="tel:+918888926336">📞 Call Now</a><a class="btn green" target="_blank" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab.">💬 WhatsApp</a></div>
-</div>
-<div class="heroCard"><h3>Quick & Easy Booking</h3><p>Choose your trip type and see the applicable fare information before sending the booking.</p><div class="mini"><div>🚕<b>Local</b>Hourly packages</div><div>🛣️<b>Outstation</b>One Way / Round</div><div>✈️<b>Airport</b>Pickup / Drop</div><div>🧳<b>Tours</b>Custom trips</div></div><a class="btn gold" style="width:100%;margin-top:14px" href="#booking">Start Booking →</a></div>
-</div></section>
-
-<section id="services"><div class="wrap"><div class="head"><div class="eyebrow">Everything in one place</div><h2>Travel Services</h2><p>Designed so a first-time customer can understand the service and book without confusion.</p></div><div class="grid">
-<div class="card"><div class="icon">⏱️</div><h3>Local Rental</h3><p>4/40, 6/60, 8/80 and 12/120 hour-km packages.</p></div>
-<div class="card"><div class="icon">🛣️</div><h3>Outstation One Way</h3><p>Point-to-point travel with KM-based estimate.</p></div>
-<div class="card"><div class="icon">🔁</div><h3>Outstation Round Trip</h3><p>Return travel with transparent KM basis.</p></div>
-<div class="card"><div class="icon">✈️</div><h3>Airport Transfer</h3><p>Pune Airport pickup and drop booking.</p></div>
-<div class="card"><div class="icon">🧳</div><h3>Tour Packages</h3><p>Family, pilgrimage and customized tours.</p></div>
-<div class="card"><div class="icon">🏢</div><h3>Corporate & Events</h3><p>Business travel, weddings and group transport.</p></div>
+<section id="smart-fare"><div class="wrap"><div class="section-head"><div class="eyebrow">Smart pricing</div><h2>Smart Upfront Fare</h2><p>Enter pickup, destination and pickup time to see an estimate before sending the booking.</p></div><div class="prof-grid"><div class="prof-card"><div class="prof-icon">📍</div><h3>Distance-based</h3><p>Route distance is the main fare input, with a clear estimate shown before booking.</p></div><div class="prof-card"><div class="prof-icon">🚗</div><h3>Vehicle-aware</h3><p>Different vehicle categories use configurable pricing factors.</p></div><div class="prof-card"><div class="prof-icon">📈</div><h3>Time-aware</h3><p>Peak and night factors can adjust the estimate, inspired by the upfront-pricing concept.</p></div></div></div></section><section id="packages"><div class="wrap">
+<div class="section-head"><div class="eyebrow">Popular routes</div><h2>Simple Packages</h2><p>Popular options are shown as starting/confirmed examples. Final availability and applicable extras are confirmed before booking.</p></div>
+<div class="package-grid">
+<div class="package-card featured"><span class="mini-tag">SPECIAL</span><div class="icon">🛕</div><h3>Pune ↔ Akkalkot</h3><div class="package-price">₹9,000</div><p>Round Trip package</p><div class="package-list"><div>Maruti Ertiga CNG option</div><div>Toll / parking extra</div><div>Night ₹1,200 if applicable</div><div>Driver allowance ₹300 if applicable</div></div><a class="btn primary" style="width:100%;margin-top:17px" href="#booking">Book Akkalkot</a></div>
+<div class="package-card"><div class="icon">🛣️</div><h3>Outstation Cab</h3><div class="package-price">₹15/km</div><p>Estimate basis</p><div class="package-list"><div>One Way / Round Trip</div><div>Fare estimate before booking</div><div>Toll / parking extra</div><div>Final fare confirmation on WhatsApp</div></div><a class="btn outline" style="width:100%;margin-top:17px;background:#111827;color:#fff" href="#booking">Get Estimate</a></div>
+<div class="package-card"><div class="icon">✈️</div><h3>Airport Transfer</h3><div class="package-price">On Enquiry</div><p>Pickup / drop</p><div class="package-list"><div>Advance trip details</div><div>Pickup time support</div><div>Direct call & WhatsApp</div><div>Final fare confirmation</div></div><a class="btn outline" style="width:100%;margin-top:17px;background:#111827;color:#fff" href="#booking">Book Airport</a></div>
 </div></div></section>
+<section id="vehicles"><div class="wrap"><div class="section-head"><div class="eyebrow">Comfort on the road</div><h2>Our Vehicles</h2><p>Choose the right vehicle for your family, airport or outstation journey.</p></div><div class="grid"><div class="card vehicle"><img src="2025-10-29-06-32-36-241.jpg" alt="Kautuk Tours Maruti Ertiga CNG" loading="lazy"><div class="body"><h3>Maruti Ertiga CNG</h3><p>Comfortable family cab • AC • spacious luggage • ideal for outstation trips.</p><span class="tag">Popular Choice</span></div></div><div class="card"><div class="icon">🚗</div><h3>Dzire / Etios</h3><p>Economical and comfortable sedan travel for smaller groups.</p></div><div class="card"><div class="icon">🚙</div><h3>Innova / Crysta</h3><p>Premium comfort for family and long-distance journeys.</p></div><div class="card"><div class="icon">🚌</div><h3>Tempo Traveller</h3><p>Group travel options available on request.</p></div></div></div></section>
+<section id="gallery"><div class="wrap"><div class="section-head"><div class="eyebrow">See our rides</div><h2>Vehicle Gallery</h2><p>A quick look at the vehicles used for comfortable journeys.</p></div><div class="gallery"><img src="2025-10-29-06-32-36-241.jpg" alt="Kautuk Tours cab" loading="lazy"><img src="IMG_20250508_172739258_HDR.jpg" alt="Kautuk Tours vehicle" loading="lazy"><img src="IMG_20250508_172914775_HDR.jpg" alt="Kautuk Tours vehicle" loading="lazy"><img src="IMG_20250508_173043777.jpg" alt="Kautuk Tours vehicle" loading="lazy"></div></div></section>
 
-<section id="booking" class="booking"><div class="wrap"><div class="head"><div class="eyebrow">Customer-first booking</div><h2>Book Your Cab in 3 Steps</h2><p>Fill the details → check the fare → send the complete booking on WhatsApp.</p></div>
-<div class="steps"><div class="step"><b>01</b>Choose trip type & locations</div><div class="step"><b>02</b>See KM / package fare & 15% advance</div><div class="step"><b>03</b>Send booking to Kautuk WhatsApp</div></div>
-<form class="form" id="bookingForm">
-<div class="formgrid">
-<div class="field"><label>Booking Type *</label><select id="bType"><option value="local">Local Rental</option><option value="oneway">Outstation One Way</option><option value="round">Outstation Round Trip</option><option value="airport">Airport Transfer</option><option value="tour">Tour Package</option></select></div>
-<div class="field" id="localField"><label>Local Package *</label><select id="localPkg"><option value="1800">4 Hours / 40 KM — ₹1,800</option><option value="2300">6 Hours / 60 KM — ₹2,300</option><option value="2800">8 Hours / 80 KM — ₹2,800</option><option value="3700">12 Hours / 120 KM — ₹3,700</option></select></div>
-<div class="field"><label>Your Name *</label><input id="bName" required placeholder="Enter your name"></div>
-<div class="field"><label>Mobile Number *</label><input id="bMobile" required maxlength="10" inputmode="numeric" placeholder="10 digit mobile number"></div>
-<div class="field"><label>Pickup Location *</label><input id="bPickup" required value="Ambegaon BK, Pune" placeholder="Pickup location"></div>
-<div class="field"><label>Destination *</label><input id="bDestination" required placeholder="e.g. Mahabaleshwar / Mumbai"></div>
-<div class="field"><label>Travel Date *</label><input id="bDate" type="date" required></div>
-<div class="field"><label>Pickup Time *</label><input id="bTime" type="time" required></div>
-<div class="field"><label>Vehicle</label><select id="bVehicle"><option>Maruti Ertiga CNG</option><option>Dzire / Etios — On Enquiry</option><option>Innova / Crysta — On Enquiry</option><option>Tempo Traveller — On Enquiry</option></select></div>
-<div class="field"><label>Passengers</label><select id="bPassengers"><option>1–3</option><option>4–6</option><option>7–12</option><option>13+</option></select></div>
-<div class="field full"><label>Extra Trip Details</label><textarea id="bDetails" placeholder="Return date, stops, luggage, child seat or any special request"></textarea><span class="help">Optional — add anything Kautuk should know before confirming.</span></div>
-</div>
-<div class="fare" id="fareBox"><div class="fareTitle">YOUR FARE INFORMATION</div><div class="fareAmount" id="fareAmount">₹—</div><div class="fareKm" id="fareKm">Select trip details to calculate.</div><div class="break" id="fareBreak"></div><div class="advance"><span>Booking confirmation requires 15% advance.</span><b id="advanceAmount">Advance: ₹—</b></div></div>
-<div class="routeBtns"><a id="pickupMap" href="#" target="_blank">📍 Pickup Map</a><a id="destinationMap" href="#" target="_blank">🏁 Destination Map</a></div>
-<button class="btn gold" style="width:100%;margin-top:14px" type="submit">💬 Send Booking on WhatsApp</button>
-<div id="bookingStatus" class="status"></div>
-<p class="help" style="text-align:center;margin:10px 0 0">Toll & parking are extra where applicable. For routes without a stored estimate, Kautuk confirms the final fare on WhatsApp.</p>
-</form></div></section>
-
-<section id="local" class="local"><div class="wrap"><div class="head"><div class="eyebrow">Pune local rental</div><h2>Simple Local Packages</h2><p>Maruti Ertiga CNG • Package fare • Toll & parking extra</p></div><div class="packages">
-<div class="pkg feature"><h3>4 Hours / 40 KM</h3><div class="price">₹1,800</div><ul><li>Extra KM ₹15</li><li>Extra hour ₹200</li><li>15% advance ₹270</li></ul></div>
-<div class="pkg"><h3>6 Hours / 60 KM</h3><div class="price">₹2,300</div><ul><li>Extra KM ₹15</li><li>Extra hour ₹200</li><li>15% advance ₹345</li></ul></div>
-<div class="pkg"><h3>8 Hours / 80 KM</h3><div class="price">₹2,800</div><ul><li>Extra KM ₹15</li><li>Extra hour ₹200</li><li>15% advance ₹420</li></ul></div>
-<div class="pkg"><h3>12 Hours / 120 KM</h3><div class="price">₹3,700</div><ul><li>Extra KM ₹15</li><li>Extra hour ₹200</li><li>15% advance ₹555</li></ul></div>
-</div></div></section>
-
-<section id="destinations" class="destination"><div class="wrap"><div class="destGrid">
-<div class="destCard"><div class="eyebrow" style="color:#fbbf24">Maharashtra travel</div><h2 style="margin-top:8px">District → Taluka → Destination</h2><p>Select a district and taluka, then enter the exact destination. For common routes, the website shows a transparent Pune-origin KM estimate. For a new village/place, the booking goes to WhatsApp for final confirmation instead of showing a fake number.</p><div class="destList"><span class="destTag">Pune</span><span class="destTag">Mumbai</span><span class="destTag">Mahabaleshwar</span><span class="destTag">Nashik</span><span class="destTag">Solapur</span><span class="destTag">Kolhapur</span><span class="destTag">Raigad</span><span class="destTag">Tuljapur</span></div></div>
-<div class="form" style="max-width:none"><div class="formgrid">
-<div class="field"><label>District</label><select id="dDistrict"><option value="">Select District</option></select></div>
-<div class="field"><label>Taluka</label><select id="dTaluka" disabled><option value="">Select Taluka</option></select></div>
-<div class="field full"><label>Destination / Village / Place</label><input id="dPlace" placeholder="Example: Raigad Fort, Akkalkot, Mahabaleshwar"></div>
-</div><button class="btn gold" id="estimateBtn" style="width:100%;margin-top:14px" type="button">📍 Show KM & Fare</button><div id="destResult" class="fare" style="display:none"><div class="fareTitle">PUNE-ORIGIN ESTIMATE</div><div class="fareAmount" id="dKm">— KM</div><div class="fareAmount" id="dFare">₹—</div><div class="break" id="dBreak"></div><div class="advance"><span>15% booking advance</span><b id="dAdvance">₹—</b></div></div><div id="destStatus" class="status"></div></div>
-</div></div></section>
-
-<section><div class="wrap"><div class="head"><div class="eyebrow">Why Kautuk</div><h2>Built for Trust</h2><p>Professional booking without making the customer download an app or fill a complicated form.</p></div><div class="grid">
-<div class="card"><div class="icon">💰</div><h3>Clear Pricing</h3><p>Package or KM basis is shown before the customer sends the booking.</p></div>
-<div class="card"><div class="icon">📱</div><h3>WhatsApp First</h3><p>Customer can book directly from the website using familiar WhatsApp.</p></div>
-<div class="card"><div class="icon">🧾</div><h3>Booking ID</h3><p>Every WhatsApp booking gets a unique reference number.</p></div>
-<div class="card"><div class="icon">🤝</div><h3>Human Support</h3><p>Final availability and fare are confirmed directly by Kautuk.</p></div>
-</div></div></section>
-
-
-<section id="gallery"><div class="wrap"><div class="head"><div class="eyebrow">Our vehicle</div><h2>Kautuk on the Road</h2><p>Maruti Ertiga CNG • MH 12 WJ 9632</p></div><div class="galleryGrid"><div class="galleryHero"><div class="carIcon">🚙</div><h3>Comfortable Pune Cab Service</h3><p>Local rental • Outstation • Airport • Tours</p><div class="heroActions"><a class="btn gold" href="#booking">Book This Cab</a><a class="btn green" target="_blank" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20the%20Ertiga%20CNG.">WhatsApp</a></div></div><div class="galleryInfo"><b>Vehicle</b><span>Maruti Ertiga CNG</span><b>Number</b><span>MH 12 WJ 9632</span><b>Service Area</b><span>Pune & Maharashtra</span><b>Extra KM</b><span>₹15/km after package limit</span></div></div></div></section>
-
-<section id="invoice" class="booking">
+<section id="why-book">
 <div class="wrap">
-<div class="head"><div class="eyebrow">Trip completed</div><h2>Generate Customer Bill</h2>
-<p>Trip complete झाल्यावर final charges भरून professional bill तयार करा.</p></div>
-<div class="form">
-<div class="formgrid">
-<div class="field"><label>Booking ID</label><input id="iBooking" placeholder="KT-12345678"></div>
-<div class="field"><label>Invoice Number</label><input id="iInvoice" placeholder="KTINV-2026-001"></div>
-<div class="field"><label>Customer Name *</label><input id="iName" placeholder="Customer name"></div>
-<div class="field"><label>Customer Mobile</label><input id="iMobile" maxlength="10" inputmode="numeric" placeholder="10 digit mobile"></div>
-<div class="field"><label>Pickup</label><input id="iPickup" placeholder="Pickup location"></div>
-<div class="field"><label>Destination</label><input id="iDestination" placeholder="Destination"></div>
-<div class="field"><label>Travel Date</label><input id="iDate" type="date"></div>
-<div class="field"><label>Vehicle</label><input id="iVehicle" value="Maruti Ertiga CNG"></div>
-<div class="field"><label>Vehicle Number</label><input id="iVehicleNo" value="MH 12 WJ 9632"></div>
-<div class="field"><label>Total KM</label><input id="iKm" type="number" min="0" placeholder="250"></div>
-<div class="field"><label>Trip Fare ₹</label><input id="iFare" type="number" min="0" placeholder="0"></div>
-<div class="field"><label>Extra KM Charge ₹</label><input id="iExtraKm" type="number" min="0" value="0"></div>
-<div class="field"><label>Extra Hour Charge ₹</label><input id="iExtraHour" type="number" min="0" value="0"></div>
-<div class="field"><label>Toll ₹</label><input id="iToll" type="number" min="0" value="0"></div>
-<div class="field"><label>Parking ₹</label><input id="iParking" type="number" min="0" value="0"></div>
-<div class="field"><label>Other Charges ₹</label><input id="iOther" type="number" min="0" value="0"></div>
-<div class="field"><label>Advance Paid ₹</label><input id="iAdvance" type="number" min="0" value="0"></div>
-<div class="field"><label>Payment Status</label><select id="iPayment"><option>Paid</option><option>Partially Paid</option><option>Pending</option></select></div>
-<div class="field full"><label>Notes</label><textarea id="iNotes" placeholder="Thank you for travelling with Kautuk Tours & Travels."></textarea></div>
+<div class="section-head"><div class="eyebrow">Why choose us</div><h2>Professional Booking Experience</h2><p>Clear estimates, quick confirmation and direct WhatsApp support.</p></div>
+<div class="prof-grid">
+<div class="prof-card"><div class="prof-icon">🔖</div><h3>Booking ID</h3><p>Every WhatsApp request gets a unique Kautuk booking reference for easy follow-up.</p></div>
+<div class="prof-card"><div class="prof-icon">💰</div><h3>Clear Fare</h3><p>₹15/km estimate, with toll/parking and applicable night or driver charges shown separately.</p></div>
+<div class="prof-card"><div class="prof-icon">📍</div><h3>Route Support</h3><p>Open pickup and destination directly in Google Maps before confirming your trip.</p></div>
 </div>
-<button class="btn gold" id="generateInvoice" type="button" style="width:100%;margin-top:15px">🧾 Generate Bill</button>
-<div id="invoiceOutput" style="display:none;margin-top:20px"></div>
-</div></div></section>
-<section id="faq"><div class="wrap"><div class="head"><div class="eyebrow">Questions</div><h2>Frequently Asked Questions</h2></div><div class="faq">
-<details><summary>What are the local rental rates?</summary><p>4/40 ₹1,800 • 6/60 ₹2,300 • 8/80 ₹2,800 • 12/120 ₹3,700 for Maruti Ertiga CNG. Extra KM ₹15 and extra hour ₹200.</p></details>
-<details><summary>How is outstation fare calculated?</summary><p>For routes with a stored estimate, the website uses the displayed road KM × ₹15/km. Round trip uses the estimated distance for both directions. Toll and parking are extra. Final fare is confirmed before booking.</p></details>
-<details><summary>How much advance is required?</summary><p>15% of the displayed package/estimated fare is shown as the booking-confirmation advance.</p></details>
-<details><summary>What if my village or destination is not in the list?</summary><p>Enter the exact place in the destination box. If there is no reliable stored estimate, the website does not invent a KM or price; Kautuk confirms the route and final fare on WhatsApp.</p></details>
-<details><summary>Can I book airport or tour packages?</summary><p>Yes. Select Airport Transfer or Tour Package in the booking form and send the request on WhatsApp for final fare and availability.</p></details>
-</div></div></section>
+</div>
+</section>
+<section class="booking" id="booking"><div class="wrap"><div class="section-head"><div class="eyebrow">Quick booking</div><h2>Book Your Cab</h2><p>Fill in your travel details and send the booking directly on WhatsApp.</p></div><form class="form" onsubmit="sendBooking(event)"><div class="form-top"><div class="form-icon">📝</div><div><h3>Trip Details</h3><p>We will confirm availability and fare with you on WhatsApp.</p></div></div><div class="formgrid"><div class="field"><label for="name">Your Name *</label><input id="name" required autocomplete="name" placeholder="Enter your name"></div><div class="field"><label for="mobile">Mobile Number *</label><input id="mobile" type="tel" inputmode="numeric" maxlength="10" minlength="10" pattern="[0-9]{10}" required autocomplete="tel" placeholder="10 digit mobile number"></div><div class="field"><label for="pickup">Pickup Location *</label><input id="pickup" required autocomplete="street-address" placeholder="e.g. Katraj, Pune"></div><div class="field"><label for="district">Destination District *</label><select id="district" required><option value="">Select District</option></select></div><div class="field"><label for="taluka">Destination Taluka *</label><select id="taluka" required disabled><option value="">First select district</option></select></div><div class="field"><label for="destination">Destination / Village / Landmark *</label><input id="destination" required list="mhLocations" placeholder="e.g. Ghatanji, market, hotel"><datalist id="mhLocations"><option value="Achalpur"></option>
+<option value="Aheri"></option>
+<option value="Ahilyanagar"></option>
+<option value="Ahmadpur"></option>
+<option value="Ajra"></option>
+<option value="Akkalkot"></option>
+<option value="Akkalkuwa"></option>
+<option value="Akola"></option>
+<option value="Akole"></option>
+<option value="Akot"></option>
+<option value="Akrani"></option>
+<option value="Alibag"></option>
+<option value="Amalner"></option>
+<option value="Ambad"></option>
+<option value="Ambarnath"></option>
+<option value="Ambegaon"></option>
+<option value="Ambejogai"></option>
+<option value="Amgaon"></option>
+<option value="Amravati"></option>
+<option value="Andheri"></option>
+<option value="Anjangaon Surji"></option>
+<option value="Ardhapur"></option>
+<option value="Arjuni Morgaon"></option>
+<option value="Armori"></option>
+<option value="Arni"></option>
+<option value="Arvi"></option>
+<option value="Ashti"></option>
+<option value="Atpadi"></option>
+<option value="Aundha (Nagnath)"></option>
+<option value="Ausa"></option>
+<option value="Babulgaon"></option>
+<option value="Badnapur"></option>
+<option value="Baglan"></option>
+<option value="Balapur"></option>
+<option value="Ballarpur"></option>
+<option value="Baramati"></option>
+<option value="Barshi"></option>
+<option value="Barshitakli"></option>
+<option value="Basmath"></option>
+<option value="Bavda"></option>
+<option value="Beed"></option>
+<option value="Bhadgaon"></option>
+<option value="Bhadravati"></option>
+<option value="Bhamragad"></option>
+<option value="Bhandara"></option>
+<option value="Bhatkuli"></option>
+<option value="Bhiwandi"></option>
+<option value="Bhiwapur"></option>
+<option value="Bhokar"></option>
+<option value="Bhokardan"></option>
+<option value="Bhor"></option>
+<option value="Bhudargad"></option>
+<option value="Bhum"></option>
+<option value="Bhusawal"></option>
+<option value="Biloli"></option>
+<option value="Bodwad"></option>
+<option value="Borivali"></option>
+<option value="Brahmapuri"></option>
+<option value="Buldana"></option>
+<option value="Buldhana"></option>
+<option value="Chakur"></option>
+<option value="Chalisgaon"></option>
+<option value="Chamorshi"></option>
+<option value="Chandgad"></option>
+<option value="Chandrapur"></option>
+<option value="Chandur Railway"></option>
+<option value="Chandurbazar"></option>
+<option value="Chandvad"></option>
+<option value="Chhatrapati Sambhajinagar"></option>
+<option value="Chikhaldara"></option>
+<option value="Chikhli"></option>
+<option value="Chimur"></option>
+<option value="Chiplun"></option>
+<option value="Chopda"></option>
+<option value="Dahanu"></option>
+<option value="Dapoli"></option>
+<option value="Darwha"></option>
+<option value="Daryapur"></option>
+<option value="Daund"></option>
+<option value="Deglur"></option>
+<option value="Deola"></option>
+<option value="Deolgaon Raja"></option>
+<option value="Deoli"></option>
+<option value="Deoni"></option>
+<option value="Deori"></option>
+<option value="Desaiganj (Vadasa)"></option>
+<option value="Devgad"></option>
+<option value="Dhamangaon Railway"></option>
+<option value="Dhanora"></option>
+<option value="Dharangaon"></option>
+<option value="Dharashiv"></option>
+<option value="Dharmabad"></option>
+<option value="Dharni"></option>
+<option value="Dharur"></option>
+<option value="Dhule"></option>
+<option value="Digras"></option>
+<option value="Dindori"></option>
+<option value="Dodamarg"></option>
+<option value="Erandol"></option>
+<option value="Etapalli"></option>
+<option value="Gadchiroli"></option>
+<option value="Gadhinglaj"></option>
+<option value="Gangakhed"></option>
+<option value="Gangapur"></option>
+<option value="Georai"></option>
+<option value="Ghansawangi"></option>
+<option value="Ghatanji"></option>
+<option value="Gondia"></option>
+<option value="Gondiya"></option>
+<option value="Gondpipri"></option>
+<option value="Goregaon"></option>
+<option value="Guhagar"></option>
+<option value="Hadgaon"></option>
+<option value="Hatkanangle"></option>
+<option value="Haveli"></option>
+<option value="Himayatnagar"></option>
+<option value="Hinganghat"></option>
+<option value="Hingna"></option>
+<option value="Hingoli"></option>
+<option value="Igatpuri"></option>
+<option value="Indapur"></option>
+<option value="Jafferabad"></option>
+<option value="Jalgaon"></option>
+<option value="Jalgaon (Jamod)"></option>
+<option value="Jalkot"></option>
+<option value="Jalna"></option>
+<option value="Jamkhed"></option>
+<option value="Jamner"></option>
+<option value="Jaoli"></option>
+<option value="Jat"></option>
+<option value="Jawhar"></option>
+<option value="Jintur"></option>
+<option value="Jiwati"></option>
+<option value="Junnar"></option>
+<option value="Kadegaon"></option>
+<option value="Kagal"></option>
+<option value="Kaij"></option>
+<option value="Kalamb"></option>
+<option value="Kalameshwar"></option>
+<option value="Kalamnuri"></option>
+<option value="Kalwan"></option>
+<option value="Kalyan"></option>
+<option value="Kamptee"></option>
+<option value="Kandhar"></option>
+<option value="Kankavli"></option>
+<option value="Kannad"></option>
+<option value="Karad"></option>
+<option value="Karanja"></option>
+<option value="Karjat"></option>
+<option value="Karmala"></option>
+<option value="Karvir"></option>
+<option value="Katol"></option>
+<option value="Kavathemahankal"></option>
+<option value="Kelapur"></option>
+<option value="Khalapur"></option>
+<option value="Khamgaon"></option>
+<option value="Khanapur"></option>
+<option value="Khandala"></option>
+<option value="Khatav"></option>
+<option value="Khed"></option>
+<option value="Khuldabad"></option>
+<option value="Kinwat"></option>
+<option value="Kolhapur"></option>
+<option value="Kopargaon"></option>
+<option value="Korchi"></option>
+<option value="Koregaon"></option>
+<option value="Korpana"></option>
+<option value="Kudal"></option>
+<option value="Kuhi"></option>
+<option value="Kurkheda"></option>
+<option value="Kurla"></option>
+<option value="Lakhandur"></option>
+<option value="Lakhani"></option>
+<option value="Lanja"></option>
+<option value="Latur"></option>
+<option value="Loha"></option>
+<option value="Lohara"></option>
+<option value="Lonar"></option>
+<option value="Madha"></option>
+<option value="Mahabaleshwar"></option>
+<option value="Mahad"></option>
+<option value="Mahagaon"></option>
+<option value="Mahoor"></option>
+<option value="Malegaon"></option>
+<option value="Malkapur"></option>
+<option value="Malshiras"></option>
+<option value="Malwan"></option>
+<option value="Man"></option>
+<option value="Mandangad"></option>
+<option value="Mangalvedhe"></option>
+<option value="Mangaon"></option>
+<option value="Mangrulpir"></option>
+<option value="Manjlegaon"></option>
+<option value="Manora"></option>
+<option value="Mantha"></option>
+<option value="Manwath"></option>
+<option value="Maregaon"></option>
+<option value="Mauda"></option>
+<option value="Mawal"></option>
+<option value="Mehkar"></option>
+<option value="Mhasla"></option>
+<option value="Miraj"></option>
+<option value="Mohadi"></option>
+<option value="Mohol"></option>
+<option value="Mokhada"></option>
+<option value="Morshi"></option>
+<option value="Motala"></option>
+<option value="Mudkhed"></option>
+<option value="Mukhed"></option>
+<option value="Muktainagar"></option>
+<option value="Mul"></option>
+<option value="Mulchera"></option>
+<option value="Mulshi"></option>
+<option value="Mumbai City"></option>
+<option value="Mumbai Suburban"></option>
+<option value="Murbad"></option>
+<option value="Murtijapur"></option>
+<option value="Murud"></option>
+<option value="Nagar"></option>
+<option value="Nagbhir"></option>
+<option value="Nagpur"></option>
+<option value="Nagpur (Rural)"></option>
+<option value="Nagpur (Urban)"></option>
+<option value="Naigaon (Khairgaon)"></option>
+<option value="Nanded"></option>
+<option value="Nandgaon"></option>
+<option value="Nandgaon-Khandeshwar"></option>
+<option value="Nandura"></option>
+<option value="Nandurbar"></option>
+<option value="Narkhed"></option>
+<option value="Nashik"></option>
+<option value="Nawapur"></option>
+<option value="Ner"></option>
+<option value="Nevasa"></option>
+<option value="Nilanga"></option>
+<option value="Niphad"></option>
+<option value="Pachora"></option>
+<option value="Paithan"></option>
+<option value="Palam"></option>
+<option value="Palghar"></option>
+<option value="Palus"></option>
+<option value="Pandharpur"></option>
+<option value="Panhala"></option>
+<option value="Panvel"></option>
+<option value="Paranda"></option>
+<option value="Parbhani"></option>
+<option value="Parli"></option>
+<option value="Parner"></option>
+<option value="Parola"></option>
+<option value="Parseoni"></option>
+<option value="Partur"></option>
+<option value="Patan"></option>
+<option value="Pathardi"></option>
+<option value="Pathri"></option>
+<option value="Patoda"></option>
+<option value="Patur"></option>
+<option value="Pauni"></option>
+<option value="Peint"></option>
+<option value="Pen"></option>
+<option value="Phaltan"></option>
+<option value="Phulambri"></option>
+<option value="Poladpur"></option>
+<option value="Pombhurna"></option>
+<option value="Pune"></option>
+<option value="Pune City"></option>
+<option value="Purandhar"></option>
+<option value="Purna"></option>
+<option value="Pusad"></option>
+<option value="Radhanagari"></option>
+<option value="Rahata"></option>
+<option value="Rahuri"></option>
+<option value="Raigad"></option>
+<option value="Rajapur"></option>
+<option value="Rajura"></option>
+<option value="Ralegaon"></option>
+<option value="Ramtek"></option>
+<option value="Ratnagiri"></option>
+<option value="Raver"></option>
+<option value="Renapur"></option>
+<option value="Risod"></option>
+<option value="Roha"></option>
+<option value="Sadak-Arjuni"></option>
+<option value="Sailu"></option>
+<option value="Sakoli"></option>
+<option value="Sakri"></option>
+<option value="Salekasa"></option>
+<option value="Samudrapur"></option>
+<option value="Sangameshwar"></option>
+<option value="Sangamner"></option>
+<option value="Sangli"></option>
+<option value="Sangole"></option>
+<option value="Sangrampur"></option>
+<option value="Satara"></option>
+<option value="Savner"></option>
+<option value="Sawali"></option>
+<option value="Sawantwadi"></option>
+<option value="Seloo"></option>
+<option value="Sengaon"></option>
+<option value="Shahade"></option>
+<option value="Shahapur"></option>
+<option value="Shahuwadi"></option>
+<option value="Shegaon"></option>
+<option value="Shevgaon"></option>
+<option value="Shirala"></option>
+<option value="Shirol"></option>
+<option value="Shirpur"></option>
+<option value="Shirur"></option>
+<option value="Shirur (Kasar)"></option>
+<option value="Shirur-Anantpal"></option>
+<option value="Shrigonda"></option>
+<option value="Shrirampur"></option>
+<option value="Shrivardhan"></option>
+<option value="Sillod"></option>
+<option value="Sindewahi"></option>
+<option value="Sindhudurg"></option>
+<option value="Sindkhed Raja"></option>
+<option value="Sindkhede"></option>
+<option value="Sinnar"></option>
+<option value="Sironcha"></option>
+<option value="Soegaon"></option>
+<option value="Solapur"></option>
+<option value="Solapur North"></option>
+<option value="Solapur South"></option>
+<option value="Sonpeth"></option>
+<option value="Sudhagad"></option>
+<option value="Surgana"></option>
+<option value="Tala"></option>
+<option value="Talasari"></option>
+<option value="Talode"></option>
+<option value="Tasgaon"></option>
+<option value="Telhara"></option>
+<option value="Teosa"></option>
+<option value="Thane"></option>
+<option value="Tirora"></option>
+<option value="Trimbakeshwar"></option>
+<option value="Tuljapur"></option>
+<option value="Tumsar"></option>
+<option value="Udgir"></option>
+<option value="Ulhasnagar"></option>
+<option value="Umarga"></option>
+<option value="Umarkhed"></option>
+<option value="Umred"></option>
+<option value="Umri"></option>
+<option value="Uran"></option>
+<option value="Vada"></option>
+<option value="Vaibhavvadi"></option>
+<option value="Vaijapur"></option>
+<option value="Vasai"></option>
+<option value="Velhe"></option>
+<option value="Vengurla"></option>
+<option value="Vikramgad"></option>
+<option value="Wadwani"></option>
+<option value="Wai"></option>
+<option value="Walwa"></option>
+<option value="Wani"></option>
+<option value="Wardha"></option>
+<option value="Warora"></option>
+<option value="Warud"></option>
+<option value="Washi"></option>
+<option value="Washim"></option>
+<option value="Yavatmal"></option>
+<option value="Yawal"></option>
+<option value="Yevla"></option>
+<option value="Zari-Jamani"></option></datalist></div><div class="field"><label for="date">Travel Date *</label><input id="date" type="date" required></div><div class="field"><label for="pickupTime">Pickup Time *</label><input id="pickupTime" type="time" required></div><div class="field"><label for="trip">Trip Type</label><select id="trip"><option>One Way</option><option>Round Trip</option><option>Local</option><option>Airport Transfer</option></select></div><div class="field"><label for="vehicle">Vehicle</label><select id="vehicle"><option>Maruti Ertiga CNG</option><option>Dzire / Etios</option><option>Innova / Crysta</option><option>Tempo Traveller</option></select><div class="note" style="text-align:left;margin-top:4px">Vehicle-wise final fare is confirmed before booking.</div></div><div class="field"><label for="passengers">Passengers</label><select id="passengers"><option>1-3</option><option>4-6</option><option>7-12</option><option>13+</option></select></div><div class="field full"><label for="details">Trip Details</label><div class="note" style="text-align:left;margin:0 0 5px"></div><textarea id="details" placeholder="Pickup time, return date, luggage, special request etc."></textarea></div></div>
+<div id="fareBox" class="fare-box">
+  <div class="fare-label">Estimated Fare</div>
+  <div id="fareAmount" class="fare-amount">₹—</div>
+  <div id="fareMeta" class="fare-meta">Select a destination to see an estimate.</div>
+  <div id="fareBreakup" class="fare-breakup"></div>
+  <div class="fare-note">₹15/km • Extra KM ₹15/km • Toll & parking extra • Final fare confirmed before trip</div>
+<div id="bookingIdBox" class="booking-id"></div>
+<div class="quick-actions">
+<a id="pickupMap" href="#" target="_blank" rel="noopener">📍 Pickup in Maps</a>
+<a id="destinationMap" href="#" target="_blank" rel="noopener">🏁 Destination in Maps</a>
+</div>
 
-<section id="contact" class="contact"><div class="wrap"><div class="eyebrow" style="color:#fbbf24">Kautuk Tours & Travels</div><h2>Ready to Travel?</h2><p>Direct booking • Clear fare information • WhatsApp confirmation • Pune & Maharashtra travel</p><div class="heroActions" style="justify-content:center"><a class="btn gold" href="tel:+918888926336">📞 88889 26336</a><a class="btn green" target="_blank" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab.">💬 WhatsApp</a></div><p style="margin-top:18px;font-size:12px">Maruti Ertiga CNG • Vehicle No. MH 12 WJ 9632</p></div></section>
+</div>
+<button class="btn primary" type="submit">💬 Send Booking on WhatsApp</button><div class="note" style="margin-top:8px">📍 Maharashtra: 36 districts • 358 talukas. Select District → Taluka → Destination. Estimate is based on Pune-to-selected destination distance; exact route/final fare is confirmed before trip.</div><div class="note">WhatsApp not installed? The booking will open in WhatsApp Web instead.</div><div class="note">Your details are opened in WhatsApp for confirmation. No payment is taken on this website.</div></form></div></section>
+
+<section class="booking" id="trip-bill"><div class="wrap"><div class="section-head"><div class="eyebrow">Trip completed</div><h2>Generate Exact Trip Bill</h2><p>Enter the actual odometer kilometres at trip start and end. The bill calculates the exact trip amount, extra kilometres, toll, parking, night charge, driver allowance and advance.</p></div><div class="form" id="billForm"><div class="formgrid"><div class="field"><label for="billBookingId">Booking ID</label><input id="billBookingId" placeholder="e.g. KT-260815-1234"></div><div class="field"><label for="billCustomer">Customer Name *</label><input id="billCustomer" required placeholder="Customer name"></div><div class="field"><label for="billMobile">Customer Mobile *</label><input id="billMobile" type="tel" inputmode="numeric" maxlength="10" placeholder="10 digit mobile"></div><div class="field"><label for="billRate">Rate / Km (₹) *</label><input id="billRate" type="number" min="0" step="0.01" value="15"></div><div class="field"><label for="startKm">Start Odometer KM *</label><input id="startKm" type="number" min="0" step="0.1" placeholder="0"></div><div class="field"><label for="endKm">End Odometer KM *</label><input id="endKm" type="number" min="0" step="0.1" placeholder="0"></div><div class="field"><label for="billToll">Toll (₹)</label><input id="billToll" type="number" min="0" step="1" value="0"></div><div class="field"><label for="billParking">Parking (₹)</label><input id="billParking" type="number" min="0" step="1" value="0"></div><div class="field"><label for="billNight">Night Charge (₹)</label><input id="billNight" type="number" min="0" step="1" value="0"></div><div class="field"><label for="billDriver">Driver Allowance (₹)</label><input id="billDriver" type="number" min="0" step="1" value="0"></div><div class="field"><label for="billAdvance">Advance Paid (₹)</label><input id="billAdvance" type="number" min="0" step="1" value="0"></div><div class="field"><label for="billExtraKm">Included KM (optional)</label><input id="billIncludedKm" type="number" min="0" step="1" value="0" placeholder="0 = all actual km billed"></div><div class="field full"><label for="billRoute">Route / Trip Details</label><textarea id="billRoute" placeholder="Pune → Ghatanji • Ertiga CNG • One Way"></textarea></div></div><button class="btn primary" type="button" onclick="generateBill()">🧾 Generate Exact Bill</button><div id="billOutput" class="fare-box" style="margin-top:18px"></div></div></div></section>
+
+<section id="faq"><div class="wrap"><div class="section-head"><div class="eyebrow">Need to know</div><h2>Frequently Asked Questions</h2><p>Quick answers before you book.</p></div>
+<div class="faq-grid">
+<details><summary>How is the fare calculated?</summary><p>Where a preset route distance is available, the website shows an estimate using ₹15/km. Toll and parking are extra. Final fare is confirmed on WhatsApp.</p></details>
+<details><summary>What is the Akkalkot Round Trip fare?</summary><p>Pune ↔ Akkalkot Round Trip is shown as the special ₹9,000 package. Toll/parking, night charge and driver allowance apply separately where applicable.</p></details>
+<details><summary>Can I book a village or local destination?</summary><p>Yes. You can type the village, locality, landmark or destination manually even when it is not in the suggestions.</p></details>
+<details><summary>How do I confirm my booking?</summary><p>Submit the form. A Booking ID is generated and the complete booking summary is sent to WhatsApp for availability and final-fare confirmation.</p></details>
+</div></div></section>
+<section id="contact" class="contact"><div class="wrap"><h2>Ready to Travel?</h2><p>Contact Kautuk Tours and Travels for your next cab booking, airport transfer or outstation trip.</p><div class="actions"><a class="btn primary" href="tel:+918888926336">📞 88889 26336</a><a class="btn wa-btn" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">💬 WhatsApp Booking</a><a class="btn light" href="https://www.google.com/maps/search/?api=1&query=Pune%2C%20Maharashtra" target="_blank" rel="noopener">📍 Pune Location</a></div></div></section>
 </main>
-<footer>© 2026 Kautuk Tours & Travels • Ambegaon BK, Pune • Cab • Tours • Travels</footer>
-<div class="sticky"><a href="tel:+918888926336">📞 Call</a><a class="wa" target="_blank" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab.">💬 WhatsApp</a><a class="book" href="#booking">🚕 Book</a></div>
-
+<footer>© 2026 Kautuk Tours and Travels • Pune • Cab • Tours • Travels</footer>
+<div class="sticky"><a class="call" href="tel:+918888926336">📞 Call</a><a class="wa" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">💬 WhatsApp</a><a class="book" href="#booking">🚕 Book</a></div>
 <script>
-const DISTRICTS = {"Ahmednagar": ["Akole", "Jamkhed", "Karjat", "Kopargaon", "Nagar", "Nevasa", "Parner", "Pathardi", "Rahata", "Rahuri", "Sangamner", "Shevgaon", "Shrigonda", "Shrirampur"], "Akola": ["Akola", "Akot", "Balapur", "Barshitakli", "Murtizapur", "Patur", "Telhara"], "Amravati": ["Achalpur", "Amravati", "Anjangaon-Surji", "Chandur Bazar", "Chandur Railway", "Chikhaldara", "Daryapur", "Dhamangaon Railway", "Dharni", "Morshi", "Nandgaon-Khandeshwar", "Teosa", "Warud"], "Chhatrapati Sambhajinagar": ["Chhatrapati Sambhajinagar", "Gangapur", "Kannad", "Khuldabad", "Paithan", "Phulambri", "Sillod", "Soegaon", "Vaijapur"], "Beed": ["Ambajogai", "Ashti", "Beed", "Dharur", "Georai", "Kaij", "Majalgaon", "Parli", "Patoda", "Shirur-Kasar", "Wadwani"], "Bhandara": ["Bhandara", "Lakhandur", "Lakhani", "Mohadi", "Pauni", "Sakoli", "Tumsar"], "Buldhana": ["Buldhana", "Chikhli", "Deulgaon Raja", "Jalgaon Jamod", "Khamgaon", "Lonar", "Malkapur", "Mehkar", "Motala", "Nandura", "Sangrampur", "Shegaon", "Sindkhed Raja"], "Chandrapur": ["Ballarpur", "Bhadravati", "Brahmapuri", "Chimur", "Gondpipri", "Jivati", "Korpana", "Mul", "Nagbhir", "Pombhurna", "Rajura", "Saoli", "Sindewahi", "Warora"], "Dhule": ["Dhule", "Sakri", "Shirpur", "Shindkheda"], "Gadchiroli": ["Aheri", "Armori", "Bhamragad", "Chamorshi", "Dhanora", "Desaiganj", "Etapalli", "Gadchiroli", "Kurkheda", "Korchi", "Mulchera", "Sironcha"], "Gondia": ["Amgaon", "Arjuni Morgaon", "Deori", "Gondia", "Goregaon", "Sadak Arjuni", "Salekasa", "Tirora"], "Hingoli": ["Aundha Nagnath", "Basmath", "Hingoli", "Kalamnuri", "Sengaon"], "Jalgaon": ["Amalner", "Bhadgaon", "Bhusawal", "Bodwad", "Chalisgaon", "Chopda", "Dharangaon", "Erandol", "Jalgaon", "Jamner", "Muktainagar", "Pachora", "Parola", "Raver", "Yawal"], "Jalna": ["Ambad", "Badnapur", "Bhokardan", "Ghansawangi", "Jalna", "Jafrabad", "Mantha", "Partur"], "Kolhapur": ["Ajra", "Bhudargad", "Chandgad", "Gadhinglaj", "Gaganbawada", "Hatkanangale", "Kagal", "Karvir", "Panhala", "Radhanagari", "Shahuwadi", "Shirol"], "Latur": ["Ahmadpur", "Ausa", "Chakur", "Deoni", "Jalkot", "Latur", "Nilanga", "Renapur", "Shirur Anantpal", "Udgir"], "Mumbai City": ["Mumbai City"], "Mumbai Suburban": ["Andheri", "Borivali", "Kurla"], "Nagpur": ["Bhiwapur", "Hingna", "Kalmeshwar", "Kamptee", "Katol", "Kuhi", "Mauda", "Nagpur Rural", "Nagpur Urban", "Narkhed", "Parseoni", "Ramtek", "Saoner", "Umred"], "Nanded": ["Ardhapur", "Bhokar", "Biloli", "Deglur", "Dharmabad", "Hadgaon", "Himayatnagar", "Kandhar", "Kinwat", "Loha", "Mahur", "Mudkhed", "Mukhed", "Nanded", "Naigaon", "Umri"], "Nandurbar": ["Akkalkuwa", "Akrani", "Nandurbar", "Navapur", "Shahada", "Taloda"], "Nashik": ["Baglan", "Chandwad", "Deola", "Dindori", "Igatpuri", "Kalwan", "Malegaon", "Nandgaon", "Nashik", "Niphad", "Peint", "Sinnar", "Surgana", "Trimbakeshwar", "Yeola"], "Palghar": ["Dahanu", "Jawhar", "Mokhada", "Palghar", "Talasari", "Vasai", "Vikramgad", "Wada"], "Parbhani": ["Gangakhed", "Jintur", "Manwath", "Palam", "Parbhani", "Pathri", "Purna", "Sailu", "Sonpeth"], "Pune": ["Ambegaon", "Baramati", "Bhor", "Daund", "Haveli", "Indapur", "Junnar", "Khed", "Maval", "Mulshi", "Pimpri-Chinchwad", "Pune City", "Purandar", "Shirur", "Velha"], "Raigad": ["Alibag", "Karjat", "Khalapur", "Mahad", "Mangaon", "Mhasla", "Murud", "Panvel", "Pen", "Poladpur", "Roha", "Shrivardhan", "Sudhagad", "Tala", "Uran"], "Ratnagiri": ["Chiplun", "Dapoli", "Guhagar", "Khed", "Lanja", "Mandangad", "Rajapur", "Ratnagiri", "Sangameshwar"], "Sangli": ["Atpadi", "Jat", "Kadegaon", "Kavathe-Mahankal", "Khanapur", "Miraj", "Palus", "Shirala", "Tasgaon", "Walwa"], "Satara": ["Jaoli", "Karad", "Khandala", "Khatav", "Koregaon", "Mahabaleshwar", "Man", "Patan", "Phaltan", "Satara", "Wai"], "Sindhudurg": ["Devgad", "Dodamarg", "Kankavli", "Kudal", "Malvan", "Sawantwadi", "Vaibhavwadi", "Vengurla"], "Solapur": ["Akkalkot", "Barshi", "Karmala", "Madha", "Malshiras", "Mangalwedhe", "Mohol", "Pandharpur", "Sangole", "Solapur North", "Solapur South"], "Thane": ["Ambarnath", "Bhiwandi", "Kalyan", "Murbad", "Shahapur", "Thane", "Ulhasnagar"], "Dharashiv": ["Bhoom", "Dharashiv", "Kalamb", "Lohara", "Omerga", "Paranda", "Tuljapur", "Washi"], "Wardha": ["Arvi", "Ashti", "Deoli", "Hinganghat", "Karanja", "Samudrapur", "Seloo", "Wardha"], "Washim": ["Karanja", "Malegaon", "Mangrulpir", "Manora", "Risod", "Washim"], "Yavatmal": ["Arni", "Babhulgaon", "Darwha", "Digras", "Ghatanji", "Kalamb", "Kelapur", "Mahagaon", "Maregaon", "Ner", "Pusad", "Ralegaon", "Umarkhed", "Wani", "Yavatmal", "Zari-Jamani"]};
-const ROUTES = {"Mumbai": 150, "Lonavala": 65, "Khandala": 70, "Mahabaleshwar": 120, "Panchgani": 105, "Satara": 115, "Kolhapur": 230, "Sangli": 230, "Solapur": 250, "Akkalkot": 300, "Pandharpur": 210, "Tuljapur": 300, "Shirdi": 200, "Nashik": 210, "Trimbakeshwar": 225, "Ahmednagar": 120, "Ahilyanagar": 120, "Baramati": 100, "Indapur": 150, "Daund": 80, "Shirur": 70, "Junnar": 95, "Bhor": 65, "Wai": 90, "Karad": 165, "Raigad": 120, "Mahad": 150, "Alibag": 145, "Panvel": 120, "Nanded": 440, "Latur": 320, "Chhatrapati Sambhajinagar": 235, "Jalna": 270, "Beed": 220, "Amravati": 650, "Nagpur": 720, "Goa": 450, "Hyderabad": 560, "Thane": 150, "Kalyan": 145, "Bhiwandi": 145, "Murbad": 125, "Vasai": 170, "Palghar": 190, "Ratnagiri": 300, "Chiplun": 240, "Sindhudurg": 400, "Akole": 190, "Sangamner": 160, "Kopargaon": 190, "Karjat": 100, "Shahada": 430, "Dhule": 380, "Jalgaon": 420};
-const $=id=>document.getElementById(id);
-const money=n=>'₹'+Math.round(n).toLocaleString('en-IN');
-function norm(s){return (s||'').toLowerCase().trim().replace(/[^a-z0-9]+/g,' ').replace(/\s+/g,' ')}
-function findStoredKm(place){
-  const n=norm(place);
-  for(const key in ROUTES) if(n===norm(key)||n.includes(norm(key))||norm(key).includes(n)) return ROUTES[key];
-  return null;
-}
-function updateBookingFare(){
-  const t=$('bType').value, p=+$('localPkg').value;
-  $('localField').style.display=t==='local'?'flex':'none';
-  $('pickupMap').href=$('bPickup').value?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent($('bPickup').value):'#';
-  $('destinationMap').href=$('bDestination').value?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent($('bDestination').value):'#';
-  let fare=null, km=null, label='', breakdown='';
-  if(t==='local'){
-    fare=p; label='Package: '+({"1800": "4 Hours / 40 KM", "2300": "6 Hours / 60 KM", "2800": "8 Hours / 80 KM", "3700": "12 Hours / 120 KM"})[p]+' • Ertiga CNG';
-    breakdown='<div><span>Package</span><b>'+({"1800": "4 Hours / 40 KM", "2300": "6 Hours / 60 KM", "2800": "8 Hours / 80 KM", "3700": "12 Hours / 120 KM"})[p]+'</b></div><div><span>Package fare</span><b>'+money(fare)+'</b></div><div><span>Extra KM</span><b>₹15/km</b></div><div><span>Extra hour</span><b>₹200/hour</b></div><div><span>Toll / Parking</span><b>Extra</b></div>';
-  } else if(t==='airport'||t==='tour'){
-    $('fareAmount').textContent='On Enquiry'; $('fareKm').textContent=t==='airport'?'Airport transfer — final fare on WhatsApp':'Tour package — final fare on WhatsApp'; $('advanceAmount').textContent='Advance: As per final fare'; $('fareBreak').innerHTML='<div><span>Final fare</span><b>Confirmed on WhatsApp</b></div>'; return;
-  } else {
-    km=findStoredKm($('bDestination').value);
-    if(km){ fare=km*15*(t==='round'?2:1); fare=Math.ceil(fare/50)*50; label=(t==='round'?km*2:km).toFixed(0)+' KM • ₹15/km basis'; breakdown='<div><span>Road KM</span><b>'+((t==='round'?km*2:km).toFixed(0))+' KM</b></div><div><span>Rate</span><b>₹15/km</b></div><div><span>Estimated fare</span><b>'+money(fare)+'</b></div><div><span>Extra KM</span><b>₹15/km</b></div><div><span>Toll / Parking</span><b>Extra</b></div>';}
-  }
-  if(fare===null){ $('fareAmount').textContent='On Enquiry'; $('fareKm').textContent='Enter a destination to see a stored estimate, or send the booking for final fare.'; $('advanceAmount').textContent='Advance: As per final fare'; $('fareBreak').innerHTML='<div><span>Rate basis</span><b>₹15/km where applicable</b></div><div><span>Final confirmation</span><b>WhatsApp</b></div>'; return; }
-  $('fareAmount').textContent=money(fare); $('fareKm').textContent=label; $('fareBreak').innerHTML=breakdown; $('advanceAmount').textContent='Advance: '+money(fare*.15);
-}
-['bType','localPkg','bPickup','bDestination'].forEach(id=>$(id).addEventListener('input',updateBookingFare));
-['bType','localPkg'].forEach(id=>$(id).addEventListener('change',updateBookingFare));
-updateBookingFare();
+const dateInput=document.getElementById("date");
+const pickupInput=document.getElementById("pickup");
+const destinationInput=document.getElementById("destination");
+const districtInput=document.getElementById("district");
+const talukaInput=document.getElementById("taluka");
+const pickupTimeInput=document.getElementById("pickupTime");
+const tripInput=document.getElementById("trip");
+const vehicleInput=document.getElementById("vehicle");
+const detailsInput=document.getElementById("details");
+const fareBox=document.getElementById("fareBox");
+const fareAmount=document.getElementById("fareAmount");
+const fareMeta=document.getElementById("fareMeta");
+const fareBreakup=document.getElementById("fareBreakup");
+const bookingIdBox=document.getElementById("bookingIdBox");
+const pickupMap=document.getElementById("pickupMap");
+const destinationMap=document.getElementById("destinationMap");
+const OWNER_WA="918888926336";
 
-Object.keys(DISTRICTS).sort().forEach(d=>{const o=document.createElement('option');o.value=d;o.textContent=d;$('dDistrict').appendChild(o);});
-$('dDistrict').addEventListener('change',()=>{
-  $('dTaluka').innerHTML='<option value="">Select Taluka</option>';
-  $('dTaluka').disabled=!$('dDistrict').value;
-  (DISTRICTS[$('dDistrict').value]||[]).forEach(t=>{const o=document.createElement('option');o.value=t;o.textContent=t;$('dTaluka').appendChild(o);});
-});
-$('dTaluka').addEventListener('change',()=>{
-  if($('dTaluka').value) $('dPlace').value=$('dTaluka').value+', '+$('dDistrict').value;
-});
-$('estimateBtn').addEventListener('click',()=>{
-  const place=$('dPlace').value.trim();
-  if(!place){alert('Please enter/select a destination.');return;}
-  const km=findStoredKm(place);
-  $('destResult').style.display='block';
-  $('destStatus').className='status';
-  if(!km){
-    $('dKm').textContent='KM: On Enquiry'; $('dFare').textContent='Fare: On Enquiry';
-    $('dBreak').innerHTML='<div><span>Rate basis</span><b>₹15/km where applicable</b></div><div><span>Exact route</span><b>Confirmed on WhatsApp</b></div>';
-    $('dAdvance').textContent='15% Advance: As per final fare';
-    $('destStatus').textContent='This destination is not in the stored route table. We will confirm exact road KM and fare on WhatsApp.';
-    $('destStatus').className='status ok';
-    return;
-  }
-  const fare=Math.ceil(km*15/50)*50;
-  $('dKm').textContent=km+' KM'; $('dFare').textContent=money(fare);
-  $('dBreak').innerHTML='<div><span>From</span><b>Ambegaon BK, Pune</b></div><div><span>Road KM basis</span><b>'+km+' KM</b></div><div><span>Rate</span><b>₹15/km</b></div><div><span>Estimated fare</span><b>'+money(fare)+'</b></div><div><span>Extra KM</span><b>₹15/km</b></div><div><span>Toll / Parking</span><b>Extra</b></div>';
-  $('dAdvance').textContent='15% Advance: '+money(fare*.15);
-  $('destStatus').textContent='✓ Estimate ready. Final route/fare is confirmed before booking.';
-  $('destStatus').className='status ok';
-});
-$('bookingForm').addEventListener('submit',e=>{
-  e.preventDefault();
-  const mob=$('bMobile').value.replace(/\D/g,'');
-  if(!/^\d{10}$/.test(mob)){alert('Please enter a valid 10 digit mobile number.');return;}
-  if(!$('bDate').value||!$('bTime').value){alert('Please select travel date and pickup time.');return;}
-  updateBookingFare();
-  const id='KT-'+Date.now().toString().slice(-8);
-  const msg='🚕 *NEW KAUTUK BOOKING*\n\n🔖 Booking ID: '+id+'\n👤 Name: '+$('bName').value.trim()+'\n📱 Mobile: '+mob+'\n📌 Type: '+$('bType').options[$('bType').selectedIndex].text+'\n📍 Pickup: '+$('bPickup').value.trim()+'\n🏁 Destination: '+$('bDestination').value.trim()+'\n📅 Date: '+$('bDate').value+'\n🕐 Time: '+$('bTime').value+'\n🚗 Vehicle: '+$('bVehicle').value+'\n👥 Passengers: '+$('bPassengers').value+'\n💰 Amount: '+$('fareAmount').textContent+'\n💳 '+$('advanceAmount').textContent+'\n📝 Details: '+($('bDetails').value.trim()||'None')+'\n\nPlease confirm availability, exact route and final fare.';
-  $('bookingStatus').textContent='✓ Booking details ready. WhatsApp is opening. Booking ID: '+id;
-  $('bookingStatus').className='status ok';
-  window.location.href='https://wa.me/918888926336?text='+encodeURIComponent(msg);
-});
-const today=new Date();$('bDate').min=today.toISOString().slice(0,10);
-</script>
+const PRICING={base:200,perKm:15,minFare:500,roundStep:50,peakMultiplier:1.00,nightMultiplier:1.00,vehicleMultiplier:{"Maruti Ertiga CNG":1,"Dzire / Etios":0.90,"Innova / Crysta":1.35,"Tempo Traveller":1.80}};
 
-<script>
-(function(){
- const $=id=>document.getElementById(id), val=id=>($(id).value||'').trim(), num=id=>Number($(id).value||0);
- const money=n=>'₹'+Math.round(n).toLocaleString('en-IN');
- const inv= $('iInvoice');
- if(inv) inv.value='KTINV-'+new Date().getFullYear()+'-'+String(Date.now()).slice(-6);
- $('generateInvoice').addEventListener('click',()=>{
-   if(!val('iName')){alert('Please enter customer name.');return}
-   const total=num('iFare')+num('iExtraKm')+num('iExtraHour')+num('iToll')+num('iParking')+num('iOther');
-   const advance=num('iAdvance'), balance=Math.max(0,total-advance), invoice=val('iInvoice');
-   $('invoiceOutput').style.display='block';
-   $('invoiceOutput').innerHTML=
-   '<div class="invoicePaper" id="printInvoice">'+
-   '<div class="invHead"><div><div class="invBrand">KAUTUK TOURS & TRAVELS</div><div style="font-size:9px;letter-spacing:1.5px;color:#6d28d9">PUNE • CAB • TOURS • TRAVELS</div></div>'+
-   '<div class="invMeta"><b>TRIP BILL / INVOICE</b><br>Invoice: '+invoice+'<br>Booking: '+(val('iBooking')||'—')+'<br>Date: '+new Date().toLocaleDateString('en-IN')+'</div></div>'+
-   '<div style="margin-top:15px;font-size:13px"><b>Customer:</b> '+val('iName')+'<br><b>Mobile:</b> '+(val('iMobile')||'—')+'<br><b>Trip:</b> '+(val('iPickup')||'—')+' → '+(val('iDestination')||'—')+'<br><b>Travel Date:</b> '+(val('iDate')||'—')+'<br><b>Vehicle:</b> '+(val('iVehicle')||'—')+' • '+(val('iVehicleNo')||'—')+'<br><b>Total KM:</b> '+(val('iKm')||'—')+' KM</div>'+
-   '<table class="invTable"><thead><tr><th>Description</th><th>Amount</th></tr></thead><tbody>'+
-   '<tr><td>Trip Fare</td><td>'+money(num('iFare'))+'</td></tr><tr><td>Extra KM</td><td>'+money(num('iExtraKm'))+'</td></tr><tr><td>Extra Hour</td><td>'+money(num('iExtraHour'))+'</td></tr><tr><td>Toll</td><td>'+money(num('iToll'))+'</td></tr><tr><td>Parking</td><td>'+money(num('iParking'))+'</td></tr><tr><td>Other Charges</td><td>'+money(num('iOther'))+'</td></tr>'+
-   '</tbody></table><div class="invTotal"><div><span>Total Bill</span><b>'+money(total)+'</b></div><div><span>Advance Paid</span><b>'+money(advance)+'</b></div><div class="invGrand"><span>Balance</span><b>'+money(balance)+'</b></div><div><span>Payment Status</span><b>'+val('iPayment')+'</b></div></div>'+
-   '<div class="invThank">'+(val('iNotes')||'Thank you for travelling with Kautuk Tours & Travels.')+'<br><br>📞 88889 26336 • Ambegaon BK, Pune</div></div>'+
-   '<div class="invActions"><button class="btn gold" onclick="window.print()">🖨️ Print / Save PDF</button><button class="btn green" id="shareInvoice">💬 WhatsApp Bill</button></div>';
-   $('shareInvoice').onclick=()=>{
-     const msg='🧾 *KAUTUK TOURS & TRAVELS – TRIP BILL*\\n\\nInvoice: '+invoice+'\\nBooking ID: '+(val('iBooking')||'—')+'\\nCustomer: '+val('iName')+'\\nTrip: '+(val('iPickup')||'—')+' → '+(val('iDestination')||'—')+'\\nVehicle: '+(val('iVehicle')||'—')+' '+(val('iVehicleNo')||'')+'\\nTotal KM: '+(val('iKm')||'—')+' KM\\nTotal Bill: '+money(total)+'\\nAdvance Paid: '+money(advance)+'\\nBalance: '+money(balance)+'\\nPayment Status: '+val('iPayment')+'\\n\\nThank you for travelling with Kautuk Tours & Travels.';
-     window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
-   };
- });
-})();
+/* 36 Maharashtra districts / 358 talukas. District-to-taluka hierarchy is kept in one place so the booking form cannot show unrelated talukas. */
+const DISTRICT_TALUKAS={
+"Ahilyanagar":["Ahilyanagar","Shevgaon","Pathardi","Parner","Sangamner","Kopargaon","Akole","Shrirampur","Nevasa","Rahata","Rahuri","Karjat","Shrigonda","Jamkhed"],
+"Akola":["Akola","Akot","Telhara","Balapur","Patur","Murtizapur","Barshitakli"],
+"Amravati":["Amravati","Bhatkuli","Nandgaon Khandeshwar","Dharni","Chikhaldara","Achalpur","Chandurbazar","Morshi","Warud","Daryapur","Anjangaon-Surji","Chandur Railway","Dhamangaon Railway","Tiosa"],
+"Chhatrapati Sambhajinagar":["Chhatrapati Sambhajinagar","Kannad","Soegaon","Sillod","Phulambri","Khuldabad","Vaijapur","Gangapur","Paithan"],
+"Beed":["Beed","Georai","Patoda","Shirur-Kasar","Ashti","Ambajogai","Majalgaon","Wadwani","Kaij","Dharur","Parli"],
+"Bhandara":["Bhandara","Tumsar","Pauni","Mohadi","Sakoli","Lakhani","Lakhandur"],
+"Buldhana":["Buldhana","Chikhli","Deulgaon Raja","Jalgaon Jamod","Sangrampur","Malkapur","Motala","Nandura","Khamgaon","Shegaon","Mehkar","Sindkhed Raja","Lonar"],
+"Chandrapur":["Chandrapur","Saoli","Mul","Ballarpur","Pombhurna","Gondpipri","Warora","Chimur","Bhadravati","Brahmapuri","Nagbhid","Sindewahi","Rajura","Korpana","Jiwati"],
+"Dhule":["Dhule","Sakri","Shindkheda","Shirpur"],
+"Gadchiroli":["Gadchiroli","Dhanora","Chamorshi","Mulchera","Desaiganj","Armori","Kurkheda","Korchi","Aheri","Etapalli","Bhamragad","Sironcha"],
+"Gondia":["Gondia","Goregaon","Salekasa","Tirora","Deori","Amgaon","Arjuni Morgaon","Sadak Arjuni"],
+"Hingoli":["Hingoli","Sengaon","Kalamnuri","Basmath","Aundha Nagnath"],
+"Jalgaon":["Jalgaon","Jamner","Erandol","Dharangaon","Bhusawal","Raver","Muktainagar","Bodwad","Yawal","Amalner","Parola","Chopda","Pachora","Bhadgaon","Chalisgaon"],
+"Jalna":["Jalna","Bhokardan","Jafrabad","Badnapur","Partur","Ambad","Ghansawangi","Mantha"],
+"Kolhapur":["Karvir","Panhala","Shahuwadi","Kagal","Ichalkaranji","Hatkanangale","Shirol","Radhanagari","Gaganbawada","Bhudargad","Gadhinglaj","Chandgad"],
+"Latur":["Latur","Renapur","Ausa","Ahmedpur","Jalkot","Chakur","Shirur Anantpal","Nilanga","Deoni","Udgir"],
+"Mumbai":[],
+"Mumbai Suburban":["Andheri","Borivali","Kurla"],
+"Nagpur":["Nagpur Rural","Nagpur Urban","Kamptee","Hingna","Katol","Narkhed","Savner","Kalameshwar","Ramtek","Mouda","Parseoni","Umred","Kuhi","Bhiwapur"],
+"Nanded":["Nanded","Ardhapur","Mudkhed","Bhokar","Umri","Loha","Kandhar","Kinwat","Himayatnagar","Hadgaon","Mahur","Deglur","Mukhed","Dharmabad","Biloli","Naigaon"],
+"Nandurbar":["Nandurbar","Navapur","Shahada","Taloda","Akkalkuwa","Akrani"],
+"Nashik":["Nashik","Igatpuri","Dindori","Peth","Trimbakeshwar","Kalwan","Deola","Surgana","Baglan","Malegaon","Nandgaon","Chandwad","Niphad","Sinnar","Yeola"],
+"Dharashiv":["Dharashiv","Tuljapur","Bhum","Paranda","Kalamb","Washi","Umarga","Lohara"],
+"Parbhani":["Parbhani","Sonpeth","Gangakhed","Palam","Purna","Sailu","Jintur","Manwath","Pathri"],
+"Pune":["Haveli","Pune City","Khed","Junnar","Ambegaon","Maval","Mulshi","Shirur","Bhor","Purandhar","Velhe","Baramati","Indapur","Daund"],
+"Raigad":["Pen","Alibag","Murud","Panvel","Uran","Karjat","Khalapur","Mangaon","Tala","Roha","Sudhagad-Pali","Mahad","Poladpur","Shrivardhan","Mhasala"],
+"Ratnagiri":["Ratnagiri","Sangameshwar","Lanja","Rajapur","Chiplun","Guhagar","Dapoli","Mandangad","Khed"],
+"Sangli":["Miraj","Kavathemahankal","Tasgaon","Jat","Walwa","Shirala","Khanapur","Atpadi","Palus","Kadegaon"],
+"Satara":["Satara","Jaoli","Koregaon","Wai","Mahabaleshwar","Khandala","Phaltan","Maan","Khatav","Karad","Patan"],
+"Sindhudurg":["Kankavli","Vaibhavwadi","Devgad","Malwan","Sawantwadi","Kudal","Vengurla","Dodamarg"],
+"Solapur":["Barshi","Solapur North","Solapur South","Akkalkot","Madha","Karmala","Pandharpur","Mohol","Malshiras","Mangalvedhe","Sangole"],
+"Thane":["Thane","Kalyan","Murbad","Bhiwandi","Shahapur","Ulhasnagar","Ambarnath"],
+"Wardha":["Wardha","Deoli","Seloo","Arvi","Ashti","Karanja","Hinganghat","Samudrapur"],
+"Washim":["Washim","Malegaon","Risod","Mangrulpir","Karanja","Manora"],
+"Yavatmal":["Yavatmal","Arni","Babhulgaon","Kalamb","Darwha","Digras","Ner","Pusad","Umarkhed","Mahagaon","Kelapur","Ralegaon","Ghatanji","Wani","Maregaon","Zari-Jamani"],
+"Palghar":["Palghar","Vasai","Dahanu","Talasari","Jawhar","Mokhada","Vada","Vikramgad"]
+};
+
+/* Pune-to-destination road-distance estimates in km. Talukas use their district corridor estimate when an individual route is not listed. The fare remains an estimate until confirmed on WhatsApp. */
+const DISTRICT_KM={
+"Ahilyanagar":120,"Akola":540,"Amravati":650,"Chhatrapati Sambhajinagar":235,"Beed":300,"Bhandara":770,"Buldhana":470,"Chandrapur":800,"Dhule":380,"Gadchiroli":850,"Gondia":820,"Hingoli":430,"Jalgaon":420,"Jalna":350,"Kolhapur":230,"Latur":360,"Mumbai":150,"Mumbai Suburban":150,"Nagpur":720,"Nanded":500,"Nandurbar":470,"Nashik":210,"Dharashiv":290,"Parbhani":440,"Pune":10,"Raigad":120,"Ratnagiri":310,"Sangli":230,"Satara":115,"Sindhudurg":430,"Solapur":250,"Thane":150,"Wardha":650,"Washim":500,"Yavatmal":620,"Palghar":210
+};
+const TALUKA_KM={
+"Haveli":25,"Pune City":10,"Khed":55,"Junnar":95,"Ambegaon":105,"Maval":50,"Mulshi":55,"Shirur":70,"Bhor":65,"Purandhar":50,"Velhe":65,"Baramati":100,"Indapur":150,"Daund":80,
+"Akkalkot":300,"Tuljapur":290,"Pandharpur":210,"Mahabaleshwar":120,"Trimbakeshwar":220,"Shirdi":200,"Ghatanji":620,"Solapur North":250,"Solapur South":255
+};
+const SPECIAL_ROUND_TRIP={"akkalkot":9000};
+
+function getLocalDate(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`}
+dateInput.min=getLocalDate();
+function money(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
+function norm(v){return String(v||"").toLowerCase().trim().replace(/[^a-z0-9]+/g," ").replace(/\s+/g," ")}
+function makeBookingId(){const d=new Date();return `KT-${d.getFullYear().toString().slice(-2)}${String(d.getMonth()+1).padStart(2,"0")}${String(d.getDate()).padStart(2,"0")}-${Math.floor(1000+Math.random()*9000)}`}
+function mapUrl(place){return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place)}
+function updateMaps(){const p=pickupInput.value.trim(),d=destinationInput.value.trim();pickupMap.href=p?mapUrl(p):"#";destinationMap.href=d?mapUrl(d):"#";pickupMap.style.pointerEvents=p?"auto":"none";destinationMap.style.pointerEvents=d?"auto":"none"}
+function populateDistricts(){Object.keys(DISTRICT_TALUKAS).sort().forEach(d=>{const o=document.createElement("option");o.value=d;o.textContent=d;districtInput.appendChild(o)})}
+function populateTalukas(){talukaInput.innerHTML="";const d=districtInput.value;const list=DISTRICT_TALUKAS[d]||[];if(!d||!list.length){talukaInput.disabled=true;talukaInput.innerHTML=`<option value="">${d==="Mumbai"?"No taluka selection required":"First select district"}</option>`;return}talukaInput.disabled=false;talukaInput.innerHTML='<option value="">Select Taluka</option>'+list.map(t=>`<option value="${t.replace(/&/g,"&amp;").replace(/"/g,"&quot;")}">${t}</option>`).join("")}
+function selectedKm(){const d=districtInput.value,t=talukaInput.value;if(t&&TALUKA_KM[t]!=null)return TALUKA_KM[t];return DISTRICT_KM[d]??null}
+function destinationLabel(){const d=districtInput.value,t=talukaInput.value,v=destinationInput.value.trim();return [v,t,d].filter(Boolean).join(", ")}
+function timeHour(){const t=pickupTimeInput&&pickupTimeInput.value?pickupTimeInput.value:"";return t?Number(t.split(":")[0]):new Date().getHours()}
+function demandFactor(){return 1}
+function nightFactor(){return 1}
+function roundFare(n){return Math.max(PRICING.minFare,Math.ceil(n/PRICING.roundStep)*PRICING.roundStep)}
+function calculateFare(){updateMaps();const pickup=pickupInput.value.trim(),destination=destinationInput.value.trim(),district=districtInput.value,taluka=talukaInput.value,isRound=tripInput.value==="Round Trip";if(pickup.length<2||!district||(!talukaInput.disabled&&!taluka)||destination.length<2){fareBox.classList.remove("show");return}fareBox.classList.add("show");const key=norm(destination);if(isRound&&SPECIAL_ROUND_TRIP[key]){fareAmount.textContent=money(SPECIAL_ROUND_TRIP[key]);fareMeta.textContent="Pune ↔ Akkalkot • Special Round Trip package";fareBreakup.innerHTML='<div><span>Special package</span><strong>₹9,000</strong></div><div><span>KM basis</span><strong>Package</strong></div><div><span>Toll / Parking</span><strong>Extra</strong></div>';return}let km=selectedKm();if(km==null){fareBox.classList.remove("show");return}const distanceKm=isRound?km*2:km;const vehicleFactor=PRICING.vehicleMultiplier[vehicleInput.value]||1;const baseDistance=PRICING.base+distanceKm*PRICING.perKm;const total=roundFare(baseDistance*vehicleFactor);fareAmount.textContent=money(total);fareMeta.textContent=`Estimated ${Math.round(distanceKm)} km • ${vehicleInput.value}`;fareBreakup.innerHTML=`<div><span>Distance</span><strong>${Math.round(distanceKm)} km</strong></div><div><span>Rate</span><strong>₹15/km</strong></div><div><span>Vehicle factor</span><strong>${vehicleFactor.toFixed(2)}×</strong></div><div><span>Base</span><strong>${money(PRICING.base)}</strong></div><div><span>Trip fare</span><strong>${money(distanceKm*PRICING.perKm*vehicleFactor)}</strong></div><div><span>Toll / Parking</span><strong>Extra</strong></div><div><span>Extra KM</span><strong>₹15/km</strong></div><div><span>Distance source</span><strong>${taluka?"Taluka estimate":"District estimate"}</strong></div>`}
+
+populateDistricts();
+districtInput.addEventListener("change",()=>{populateTalukas();destinationInput.value="";calculateFare()});
+talukaInput.addEventListener("change",()=>{if(talukaInput.value&&!destinationInput.value)destinationInput.value=talukaInput.value;calculateFare()});
+["input","change","blur"].forEach(ev=>{destinationInput.addEventListener(ev,calculateFare);pickupInput.addEventListener(ev,calculateFare)});tripInput.addEventListener("change",calculateFare);vehicleInput.addEventListener("change",calculateFare);pickupTimeInput.addEventListener("change",calculateFare);updateMaps();
+function formatTime12h(value){if(!value)return "Not specified";const [h,m]=value.split(":").map(Number);return `${(h%12)||12}:${String(m).padStart(2,"0")} ${h>=12?"PM":"AM"}`}
+function openWhatsApp(number,message){window.open("https://wa.me/"+number+"?text="+encodeURIComponent(message),"_blank","noopener,noreferrer")}
+function sendBooking(e){e.preventDefault();const mobile=document.getElementById("mobile").value.replace(/\D/g,"");if(!/^[0-9]{10}$/.test(mobile))return alert("Please enter a valid 10 digit mobile number.");if(!dateInput.value||!pickupTimeInput.value)return alert("Please select travel date and pickup time.");if(new Date(dateInput.value+"T00:00:00")<new Date(getLocalDate()+"T00:00:00"))return alert("Please select today or a future travel date.");calculateFare();const bookingId=makeBookingId();bookingIdBox.style.display="block";bookingIdBox.innerHTML=`🔖 Booking Reference: <strong>${bookingId}</strong><div class="quick-actions" style="margin-top:10px"><button type="button" class="btn light" onclick="sendCustomerConfirmation()">📲 Send Confirmation to Customer</button></div>`;window.__lastBooking={id:bookingId,customerMobile:mobile,customerName:document.getElementById("name").value.trim(),fare:fareAmount.textContent,distance:fareMeta.textContent};const msg=`🚕 *NEW KAUTUK BOOKING*\n\n🔖 Booking ID: ${bookingId}\n👤 Name: ${document.getElementById("name").value.trim()}\n📱 Mobile: ${mobile}\n📍 Pickup: ${pickupInput.value.trim()}\n🏁 Destination: ${destinationLabel()}\n📅 Travel Date: ${dateInput.value}\n🕐 Pickup Time: ${formatTime12h(pickupTimeInput.value)}\n🔄 Trip: ${tripInput.value}\n🚗 Vehicle: ${vehicleInput.value}\n👥 Passengers: ${document.getElementById("passengers").value}\n📏 Estimated KM: ${fareMeta.textContent}\n💰 Estimated Fare: ${fareAmount.textContent}\n💳 Rate: ₹15/km\n🅿️ Toll/Parking: Extra\n🧾 Extra KM: ₹15/km\n📝 Details: ${detailsInput.value.trim()||"None"}\n\nPlease confirm availability and final fare.`;openWhatsApp(OWNER_WA,msg)}
+function sendCustomerConfirmation(){const b=window.__lastBooking;if(!b)return alert("Please send the booking first.");const msg=`✅ *KAUTUK TOURS & TRAVELS – BOOKING RECEIVED*\n\nDear ${b.customerName},\nYour booking request has been received.\n\n🔖 Booking ID: ${b.id}\n💰 Estimated Fare: ${b.fare}\n📏 ${b.distance}\n\nOur team will confirm vehicle availability and final fare with you.\nThank you for choosing Kautuk Tours & Travels.\n📞 88889 26336`;openWhatsApp("91"+b.customerMobile,msg)}
+
+function val(id){return Number(document.getElementById(id).value||0)}
+function generateBill(){const customer=document.getElementById("billCustomer").value.trim();const mobile=document.getElementById("billMobile").value.replace(/\D/g,"");const rate=val("billRate"),start=val("startKm"),end=val("endKm"),toll=val("billToll"),parking=val("billParking"),night=val("billNight"),driver=val("billDriver"),advance=val("billAdvance"),included=val("billIncludedKm");if(!customer||start<0||end<start||rate<0)return alert("Please enter valid customer, start KM, end KM and rate.");const actual=end-start;const extra=Math.max(0,actual-included);const distanceCharge=extra*rate;const subtotal=distanceCharge+toll+parking+night+driver;const balance=Math.max(0,subtotal-advance);const billNo="KT-BILL-"+Date.now().toString().slice(-8);const route=document.getElementById("billRoute").value.trim()||"Kautuk Tours & Travels Trip";document.getElementById("billOutput").classList.add("show");document.getElementById("billOutput").innerHTML=`<div class="fare-label">FINAL TRIP BILL</div><div class="fare-amount">${money(subtotal)}</div><div class="fare-meta">${billNo} • ${customer}</div><div class="fare-breakup"><div><span>Actual KM</span><strong>${actual.toFixed(1)} km</strong></div><div><span>Included KM</span><strong>${included.toFixed(1)} km</strong></div><div><span>Chargeable / Extra KM</span><strong>${extra.toFixed(1)} km × ₹${rate}</strong></div><div><span>Distance Charge</span><strong>${money(distanceCharge)}</strong></div><div><span>Toll</span><strong>${money(toll)}</strong></div><div><span>Parking</span><strong>${money(parking)}</strong></div><div><span>Night</span><strong>${money(night)}</strong></div><div><span>Driver Allowance</span><strong>${money(driver)}</strong></div><div><span>Advance Paid</span><strong>${money(advance)}</strong></div><div><span>Balance Due</span><strong>${money(balance)}</strong></div></div><div class="note">${route}</div><div class="quick-actions"><button type="button" class="btn primary" onclick="printBill()">🖨️ Print / Save PDF</button>${mobile.length===10?`<button type="button" class="btn light" onclick="sendBillWhatsApp('${mobile}',${JSON.stringify({billNo,customer,route,actual,extra,rate,distanceCharge,toll,parking,night,driver,subtotal,advance,balance})})">📲 Send Bill on WhatsApp</button>`:""}</div>`;window.__lastBill={billNo,customer,route,actual,extra,rate,distanceCharge,toll,parking,night,driver,subtotal,advance,balance}}
+function printBill(){const b=window.__lastBill;if(!b)return;const w=window.open("","_blank");w.document.write(`<html><head><title>${b.billNo}</title><style>body{font-family:Arial,sans-serif;padding:35px;max-width:700px;margin:auto}h1{margin-bottom:5px}table{width:100%;border-collapse:collapse;margin-top:20px}td{padding:10px;border-bottom:1px solid #ddd}td:last-child{text-align:right;font-weight:bold}.total{font-size:24px;font-weight:bold}</style></head><body><h1>KAUTUK TOURS & TRAVELS</h1><p>Pune • Cab • Tours • Travels</p><hr><h2>Trip Bill</h2><p><b>Bill No:</b> ${b.billNo}<br><b>Customer:</b> ${b.customer}<br><b>Route:</b> ${b.route}</p><table><tr><td>Actual KM</td><td>${b.actual.toFixed(1)} km</td></tr><tr><td>Chargeable / Extra KM</td><td>${b.extra.toFixed(1)} × ₹${b.rate}</td></tr><tr><td>Distance Charge</td><td>${money(b.distanceCharge)}</td></tr><tr><td>Toll</td><td>${money(b.toll)}</td></tr><tr><td>Parking</td><td>${money(b.parking)}</td></tr><tr><td>Night Charge</td><td>${money(b.night)}</td></tr><tr><td>Driver Allowance</td><td>${money(b.driver)}</td></tr><tr class="total"><td>Total</td><td>${money(b.subtotal)}</td></tr><tr><td>Advance Paid</td><td>${money(b.advance)}</td></tr><tr class="total"><td>Balance Due</td><td>${money(b.balance)}</td></tr></table><p style="margin-top:35px">Thank you for travelling with Kautuk Tours & Travels.</p><script>window.print()<\/script></body></html>`);w.document.close()}
+function sendBillWhatsApp(mobile,b){const msg=`🧾 *KAUTUK TOURS & TRAVELS – FINAL TRIP BILL*\n\nBill No: ${b.billNo}\nCustomer: ${b.customer}\nRoute: ${b.route}\nActual KM: ${b.actual.toFixed(1)} km\nChargeable/Extra KM: ${b.extra.toFixed(1)} km × ₹${b.rate}\nDistance Charge: ${money(b.distanceCharge)}\nToll: ${money(b.toll)}\nParking: ${money(b.parking)}\nNight Charge: ${money(b.night)}\nDriver Allowance: ${money(b.driver)}\n*Total: ${money(b.subtotal)}*\nAdvance Paid: ${money(b.advance)}\n*Balance Due: ${money(b.balance)}*\n\nThank you for travelling with Kautuk Tours & Travels.`;openWhatsApp("91"+mobile,msg)}
 </script>
 </body>
 </html>

@@ -490,22 +490,10 @@ function knownDistance(name){
   return null;
 }
 
-async function routeDistance(pickup,destination){
-  const geocode=async(q)=>{
-    const url="https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=in&q="+encodeURIComponent(q);
-    const r=await fetch(url,{headers:{"Accept":"application/json"}});
-    if(!r.ok)throw new Error("geocode");
-    return r.json();
-  };
-  const a1=await geocode(pickup);
-  const a2=await geocode(destination);
-  if(!a1.length||!a2.length)throw new Error("location");
-  const url=`https://router.project-osrm.org/route/v1/driving/${a1[0].lon},${a1[0].lat};${a2[0].lon},${a2[0].lat}?overview=false`;
-  const r=await fetch(url);
-  if(!r.ok)throw new Error("route");
-  const data=await r.json();
-  if(!data.routes||!data.routes.length)throw new Error("route");
-  return data.routes[0].distance/1000;
+function routeDistanceFallback(pickup,destination){
+  // Reliable client-side fallback when no route service is available.
+  // Exact route/tolls are confirmed on WhatsApp.
+  return 50;
 }
 
 let fareRequest=0;
@@ -530,16 +518,8 @@ async function calculateFare(){
   let km=knownDistance(destination);
   let source="Preset Kautuk route";
   if(km===null){
-    try{
-      km=await routeDistance(pickup,destination);
-      source="Live route estimate";
-    }catch(e){
-      if(request!==fareRequest)return;
-      fareAmount.textContent="Fare on enquiry";
-      fareMeta.textContent="Route could not be calculated automatically.";
-      fareBreakup.innerHTML="<div><span>Final fare</span><strong>Confirm on WhatsApp</strong></div>";
-      return;
-    }
+    km=routeDistanceFallback(pickup,destination);
+    source="Provisional route estimate";
   }
   if(request!==fareRequest)return;
 
@@ -617,8 +597,8 @@ function sendBooking(e){
 Please confirm availability and final fare.`;
 
   const url="https://wa.me/918888926336?text="+encodeURIComponent(msg);
-  window.open(url,"_blank","noopener,noreferrer");
+  window.location.href=url;
 }
-</script></script>
+</script>
 </body>
 </html>

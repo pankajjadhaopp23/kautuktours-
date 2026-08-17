@@ -29,7 +29,7 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
 @media(max-width:820px){nav{display:none}.hero{padding:72px 0 70px}.hero:after{bottom:-100px}.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:155px}.gallery img:first-child{grid-row:span 1;grid-column:1/-1;height:210px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}section{padding:58px 0}.wrap{padding:0 16px}}
 @media(min-width:821px){.sticky{display:none}}
 @media(max-width:420px){h1{font-size:40px;letter-spacing:-1.2px}.hero p{font-size:16px}.actions .btn{width:100%}.form{padding:21px;border-radius:21px}.gallery{grid-template-columns:1fr 1fr}.gallery img:first-child{height:175px}}
-</style>
+.booking-id{display:none;margin-top:12px;padding:10px 12px;border-radius:12px;background:#ecfdf5;border:1px solid #bbf7d0;color:#166534;font-size:13px;font-weight:850;text-align:center}''</style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="#top"><span class="brand-mark">🚕</span>KAUTUK TOURS & TRAVELS<span>PUNE • CAB • TOURS • TRAVELS</span></a><nav><a href="#services">Services</a><a href="#vehicles">Vehicles</a><a href="#gallery">Gallery</a><a class="nav-book" href="#booking">Book Now</a><a href="#contact">Contact</a></nav></div></header>
@@ -409,6 +409,7 @@ section{padding:72px 0}.section-head{text-align:center;margin-bottom:34px}.eyebr
   <div id="fareBreakup" class="fare-breakup"></div>
   <div class="fare-note">₹15/km • Toll & parking extra • Night charge ₹1,200 if applicable • Driver allowance ₹300 if applicable</div>
 </div>
+<div id="bookingIdBox" class="booking-id"></div>
 <button class="btn primary" type="submit">💬 Send Booking on WhatsApp</button><div class="note" style="margin-top:8px">📍 Maharashtra: 36 districts • 358 talukas searchable. Type any district or taluka; villages/localities can also be typed manually.</div><div class="note">Your details are opened in WhatsApp for confirmation. No payment is taken on this website.</div></form></div></section>
 <section id="contact" class="contact"><div class="wrap"><h2>Ready to Travel?</h2><p>Contact Kautuk Tours and Travels for your next cab booking, airport transfer or outstation trip.</p><div class="actions"><a class="btn primary" href="tel:+918888926336">📞 88889 26336</a><a class="btn wa-btn" href="https://wa.me/918888926336?text=Hello%20Kautuk%20Tours%20%26%20Travels%2C%20I%20want%20to%20book%20a%20cab." target="_blank" rel="noopener">💬 WhatsApp Booking</a><a class="btn light" href="https://www.google.com/maps/search/?api=1&query=Pune%2C%20Maharashtra" target="_blank" rel="noopener">📍 Pune Location</a></div></div></section>
 </main>
@@ -425,9 +426,6 @@ const fareBox=document.getElementById("fareBox");
 const fareAmount=document.getElementById("fareAmount");
 const fareMeta=document.getElementById("fareMeta");
 const fareBreakup=document.getElementById("fareBreakup");
-const bookingIdBox=document.getElementById("bookingIdBox");
-const pickupMap=document.getElementById("pickupMap");
-const destinationMap=document.getElementById("destinationMap");
 const RATE_PER_KM=15;
 const BASE_FARE=200;
 const MIN_FARE=500;
@@ -473,14 +471,6 @@ function formatTime12(value){
   const hh=(h%12)||12;
   return `${hh}:${String(m).padStart(2,"0")} ${ap}`;
 }
-function mapUrl(place){
-  return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(place);
-}
-function updateMaps(){
-  const p=pickupInput.value.trim(), d=destinationInput.value.trim();
-  pickupMap.href=p?mapUrl(p):"#";
-  destinationMap.href=d?mapUrl(d):"#";
-}
 function knownDistance(name){
   const n=norm(name);
   if(DESTINATIONS[n]!=null)return DESTINATIONS[n];
@@ -490,16 +480,27 @@ function knownDistance(name){
   return null;
 }
 
-function routeDistanceFallback(pickup,destination){
-  // Reliable client-side fallback when no route service is available.
-  // Exact route/tolls are confirmed on WhatsApp.
-  return 50;
+async function routeDistance(pickup,destination){
+  const geocode=async(q)=>{
+    const url="https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=in&q="+encodeURIComponent(q);
+    const r=await fetch(url,{headers:{"Accept":"application/json"}});
+    if(!r.ok)throw new Error("geocode");
+    return r.json();
+  };
+  const a1=await geocode(pickup);
+  const a2=await geocode(destination);
+  if(!a1.length||!a2.length)throw new Error("location");
+  const url=`https://router.project-osrm.org/route/v1/driving/${a1[0].lon},${a1[0].lat};${a2[0].lon},${a2[0].lat}?overview=false`;
+  const r=await fetch(url);
+  if(!r.ok)throw new Error("route");
+  const data=await r.json();
+  if(!data.routes||!data.routes.length)throw new Error("route");
+  return data.routes[0].distance/1000;
 }
 
 let fareRequest=0;
 async function calculateFare(){
   const pickup=pickupInput.value.trim(),destination=destinationInput.value.trim();
-  updateMaps();
   if(pickup.length<3||destination.length<3){fareBox.classList.remove("show");return}
   fareBox.classList.add("show");
   fareAmount.textContent="Calculating…";
@@ -518,8 +519,16 @@ async function calculateFare(){
   let km=knownDistance(destination);
   let source="Preset Kautuk route";
   if(km===null){
-    km=routeDistanceFallback(pickup,destination);
-    source="Provisional route estimate";
+    try{
+      km=await routeDistance(pickup,destination);
+      source="Live route estimate";
+    }catch(e){
+      if(request!==fareRequest)return;
+      fareAmount.textContent="Fare on enquiry";
+      fareMeta.textContent="Route could not be calculated automatically.";
+      fareBreakup.innerHTML="<div><span>Final fare</span><strong>Confirm on WhatsApp</strong></div>";
+      return;
+    }
   }
   if(request!==fareRequest)return;
 
@@ -597,7 +606,7 @@ function sendBooking(e){
 Please confirm availability and final fare.`;
 
   const url="https://wa.me/918888926336?text="+encodeURIComponent(msg);
-  window.location.href=url;
+  window.open(url,"_blank","noopener,noreferrer");
 }
 </script>
 </body>
